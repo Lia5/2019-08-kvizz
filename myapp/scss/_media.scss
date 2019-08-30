@@ -28,13 +28,7 @@
 @media only screen and (max-width: 1240px) {
   
 }
-@media only screen and (max-width: 1024px) {
-  
-}
-@media only screen and (max-width: 980px) {
-  
-}
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 1023px) {
     .menu-toggle {
         display: block;
         width: 26px;
@@ -70,13 +64,6 @@
 
         
     }
-
-
-
-
-
-
-
     .main-menu {
         display: none;
         &.active {
@@ -101,6 +88,12 @@
         padding-right: 25px;
     }
 
+}
+@media only screen and (max-width: 980px) {
+  
+}
+@media only screen and (max-width: 720px) {
+   
 }
 @media only screen and (max-width: 500px) {
    
