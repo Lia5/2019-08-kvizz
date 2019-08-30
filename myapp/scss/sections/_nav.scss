@@ -28,6 +28,9 @@ nav {
             padding: 5px;
         }
     }
+    &__mobile {
+        display: none;
+    }
 }
 .menu-toggle {
     display: none;

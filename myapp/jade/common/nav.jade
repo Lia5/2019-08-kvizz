@@ -2,15 +2,16 @@ nav
 	.wrap
 		.nav
 			.menu-wrap
+				.nav__mobile
+					.logo
+						a(href="#" data-menuAnchor="#ideal")
+							img(src="assets/img/logo.png", alt="logo")
+					.nav__phone 
 				.menu-toggle 
 					.one
 					.two
 					.three
-
 				nav.main-menu 
-					.nav__city 
-						.nav__city-logo
-						.nav__city-select Москва
 					ul
 						li
 							a(href="#" data-menuAnchor="#calc") Расписание
@@ -29,3 +30,6 @@ nav
 							a(href="#" data-menuAnchor="#contacts") Франшиза
 						li
 							a(href="#" data-menuAnchor="#contacts") Контакты
+					.nav__city 
+						.nav__city-logo
+						.nav__city-select Москва
