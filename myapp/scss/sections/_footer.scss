@@ -1,0 +1,57 @@
+.footer {
+    background: $blue;
+    color: #fff;
+    padding: 66px 50px 59px;
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        margin-bottom: 30px;
+    }
+    &__logo {
+        display: block;
+        text-align: center;
+        margin-bottom: 18px;
+    }
+    &__menu {
+        font-size: 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        white-space: nowrap;
+        padding-bottom: 82px;
+        
+        a {
+            color: #fff;
+            display: block;
+            padding: 20px;
+        }
+    }
+    &__designed {
+        font-size: 12px;
+    }
+    .footer__text {
+        padding-bottom: 5px;
+    }
+}
+.rights {
+    font-size: 16px;
+    font-weight: 200;
+}
+.social {
+    display: flex;
+    margin-bottom: 18px;
+}
+.ins {
+    background-position: -60px -4px;
+}
+.vk {
+    background-position: -5px -56px;
+}
+.fb {
+    background-position: -3px -4px;
+}

@@ -1,0 +1,10 @@
+@import "_mixins/font-face";
+
+@include font-face("Bahnschrift", "../assets/fonts/Bahnschrift/Bahnschrift", 400);
+@include font-face("Gilroy", "../assets/fonts/Gilroy-Light/Gilroy-Light", 200);
+@include font-face("Gilroy", "../assets/fonts/Gilroy-Regular/Gilroy-Regular", 400);
+@include font-face("Gilroy", "../assets/fonts/Gilroy-Medium/Gilroy-Medium", 500);
+@include font-face("Gilroy", "../assets/fonts/Gilroy-SemiBold/Gilroy-SemiBold", 600);
+@include font-face("Gilroy", "../assets/fonts/Gilroy-Bold/Gilroy-Bold", 700);
+@include font-face("Gilroy", "../assets/fonts/Gilroy-ExtraBold/Gilroy-ExtraBold", 800);
+@include font-face("Gilroy", "../assets/fonts/Gilroy-Heavy/Gilroy-Heavy", 900);

@@ -1,0 +1,54 @@
+nav {
+    background-color: $black;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    a {
+        color: #fff;
+    }
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__city {
+        position: absolute;
+
+        top: 9px;
+        left: 14px;
+        padding-left: 23px;
+        font-weight: 400;
+        text-decoration: underline;
+        background: url("../assets/img/icons/city.png") no-repeat left center;
+        &:hover {
+            text-decoration: none;
+        }
+        &-select {
+            padding: 5px;
+        }
+    }
+}
+.menu-toggle {
+    display: none;
+}
+.menu-wrap {
+    width: 100%;
+}
+.toggle-menu {
+    display: none;
+}
+.cross {
+    display: none;
+}
+.main-menu {
+    position: relative;
+    ul {
+        display: flex;
+        align-items: flex-end;
+    }
+    a  {
+        display: block;
+        padding: 16px;
+    }
+}
