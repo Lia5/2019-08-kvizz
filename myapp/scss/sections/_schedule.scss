@@ -42,10 +42,11 @@
         position: relative;
         padding: 120px 0;
         position: relative;
-        top: -225px;
+        margin-top: -225px;
         overflow: hidden;
         font-weight: 600;
         font-size: 18px;
+        margin-bottom: 63px;
         &-item {
             padding: 20px 60px;
             
@@ -81,7 +82,7 @@
                 width: 189%;
                 height: 165%;
                 transform: skew(8deg,5deg);
-                background: linear-gradient(32deg, $yellow 50%, rgba(255, 255, 255, 0) 50% );
+                background: linear-gradient(30deg, $yellow 50%, rgba(255, 255, 255, 0) 50% );
                 border-left: 10px solid #000;
                 border-bottom: 10px solid #000;
             }
@@ -99,7 +100,7 @@
         }
         &-item:nth-child(3) {
             &:before {
-                top: -30%;
+                top: -31%;
                 left: -35%;
                 width: 181%;
                 height: 195%;
@@ -122,11 +123,58 @@
         }
     }
     &__body {
-        background: $blue;
+        background: #14a1cc;
         margin-top: 28px;
         border-top: 10px solid #000;
     }
     &__text {
         margin-bottom: 20px;
+    }
+    &__how {
+        position: relative;
+        max-width: 831px;
+        margin: 0 auto;
+        padding: 70px 19% 70px 0;
+        font-weight: 700;
+        font-size: 21px;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../assets/img/cat-wellcome.png') no-repeat;
+            background-position: right;
+            pointer-events: none;
+            z-index: 1;
+        }
+        &-item {
+            padding: 19px 10% 0px 40px;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 40px;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: $yellow;
+                border: 10px solid #000;
+                z-index: -1;
+            }
+            &:nth-child(odd) {
+                &:before {
+                    transform: skew(-27deg, 0deg);
+                }
+            }
+            &:nth-child(even) {
+                &:before {
+                    transform: skew(27deg, 0deg);
+                }
+            }            
+        }
     }
 }

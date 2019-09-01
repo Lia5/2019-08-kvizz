@@ -104,23 +104,14 @@ ul,li {
 
 }
 .title {
-	font-weight: 400;
-	font-size: 40px;
-	line-height: 53px;
+	font-weight: 700;
+	font-size: 36px;
 	text-align: center;
-	position: relative;
+	color: #fff;
 	text-align: center;
-	z-index: 1;
-	&__behind {
-		text-align: center;
-		font-family: Augustia;
-		color: $accent;
-		font-size: 40px;
-		line-height: 40px;
-		position: relative;
-		top: -57px;
-		z-index: -1;
-	}
+	text-transform: uppercase;
+
+
 }
 // a.kviz-btn {
 // 	color: #fff;
