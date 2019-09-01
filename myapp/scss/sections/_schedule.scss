@@ -1,0 +1,132 @@
+.schedule {
+    &__header {
+        position: relative;
+        border-bottom: 10px solid #000;
+        padding-bottom: 104px;
+        background: $red;
+        font-size: 24px;
+        font-weight: 500;
+        z-index: 1;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("../assets/img/dots-bg-linear.png") no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+        &-text {
+            padding: 40px 72px;
+            max-width: 535px;
+            height: 430px;
+            background: url("../assets/img/cat-hands.png") no-repeat;
+            background-position: top -78px center;
+            // background-size: 100%;
+            margin: 0 auto;
+            font-weight: 800;
+            font-size: 18px;
+            text-align: center;
+            text-transform: uppercase;
+            p {
+                margin: 0;
+            }
+        }
+        .wrap {
+            text-align: center;
+        }
+    }
+    &__whom {
+        position: relative;
+        padding: 120px 0;
+        position: relative;
+        top: -225px;
+        overflow: hidden;
+        font-weight: 600;
+        font-size: 18px;
+        &-item {
+            padding: 20px 60px;
+            
+            // background-size: 100%
+            position: relative;
+            z-index: 1;
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                z-index: -2;
+            }
+        }
+        &-item:nth-child(1) {
+            &:before {
+                top: -46%;
+                right: -24%;
+                width: 160%;
+                height: 162%;
+                transform: skew(9deg, 4deg);
+                background-color: $yellow;
+                border: 10px solid #000;
+            }
+        }
+        &-item:nth-child(2) {
+            &:before {
+                top: -14%;
+                right: -34%;
+                width: 189%;
+                height: 165%;
+                transform: skew(8deg,5deg);
+                background: linear-gradient(32deg, $yellow 50%, rgba(255, 255, 255, 0) 50% );
+                border-left: 10px solid #000;
+                border-bottom: 10px solid #000;
+            }
+            &:after {
+                top: -34%;
+                right: -51%;
+                width: 220%;
+                height: 200%;
+                transform: skew(-5deg,-1deg);
+                background-color: $yellow;
+                background: linear-gradient(32deg, rgba(255, 255, 255, 0) 50%, $yellow 50%);
+                border-right: 10px solid #000;
+                border-top: 10px solid #000;
+            }            
+        }
+        &-item:nth-child(3) {
+            &:before {
+                top: -30%;
+                left: -35%;
+                width: 181%;
+                height: 195%;
+                transform: skew(-5deg,1deg);
+                background: linear-gradient(32deg, $yellow 50%, rgba(255, 255, 255, 0) 50% );
+                border-left: 10px solid #000;
+                border-bottom: 10px solid #000;
+            }
+            &:after {
+                top: -60%;
+                left: -37%;
+                width: 185%;
+                height: 249%;
+                transform: skew(-6deg,-7deg);
+                background-color: $yellow;
+                background: linear-gradient(37deg, rgba(255, 255, 255, 0) 50%, $yellow 50%);
+                border-right: 10px solid #000;
+                border-top: 10px solid #000;
+            }            
+        }
+    }
+    &__body {
+        background: $blue;
+        margin-top: 28px;
+        border-top: 10px solid #000;
+    }
+    &__text {
+        margin-bottom: 20px;
+    }
+}
