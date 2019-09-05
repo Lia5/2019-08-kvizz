@@ -1,0 +1,120 @@
+.corporate {
+    overflow: hidden;
+    &__body {
+        background: #ff004c;
+        padding-bottom: 100px;
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -119px;
+            left: 0;
+            width: 110%;
+            height: 206px;
+            transform: skew(-4deg,5deg);
+            background: #ff004c;
+            border-bottom: 10px solid #000;
+        }
+    }
+    &__gallery {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        margin-top: 100px;
+        padding-top: 68px;
+        z-index: 1;
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: -2;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+        }
+        &:before {
+            top: 4%;
+            left: 4%;
+            width: 90%;
+            height: 101%;
+            transform: skew(5deg,5deg);
+            background: linear-gradient(43deg, $yellow 50%, rgba(255, 255, 255, 0) 50% );
+            border-left: 10px solid #000;
+            border-bottom: 10px solid #000;
+        }
+        &:after {
+            top: 0%;
+            left: -1%;
+            width: 100%;
+            height: 108%;
+            transform: skew(-2deg,1deg);
+            background-color: $yellow;
+            background: linear-gradient(42deg, rgba(255, 255, 255, 0) 50%, $yellow 50%);
+            border-right: 10px solid #000;
+            border-top: 10px solid #000;
+        }  
+    }
+    &__item {
+        text-align: center;
+        &-wrap {
+            width: 50%;
+            margin-bottom: 50px;
+        }
+    }
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        &-wrap {
+            position: relative;
+            margin: 0 auto;
+            width: 283px;
+            height: 163px;
+            z-index: 1;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 5%;
+                left: 4%;
+                width: 100%;
+                height: 100%;
+                background: url(../assets/img/dots.jpg);
+                z-index: -1;
+            }
+        }
+    }
+    &__header {
+        padding-top: 130px;
+        padding-bottom: 0;
+        overflow: hidden;
+        z-index: -1;
+        &:before { 
+            background-image: url("../assets/img/bgqa-fon.png");
+            background-position: bottom -100px center;
+            background-position: bottom 95% center;
+            background-size: 126vw;
+            pointer-events: none;
+        }
+        .wrap {
+            background-image: url("../assets/img/bgqa-wrap.png");
+            background-repeat: no-repeat;
+            min-height: 46vw;
+            background-size: 82vw;
+        }
+        p {
+            padding: 15vw 27vw 1vw 26vw;
+            font-size: 2.2vw;
+            font-weight: 800;
+            text-align: left;
+            text-transform: uppercase;
+        }
+    }
+}

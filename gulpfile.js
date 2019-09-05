@@ -10,7 +10,8 @@ var gulp          = require('gulp'),
 		rename        = require('gulp-rename'),
 		autoprefixer  = require('gulp-autoprefixer'),
 		notify        = require("gulp-notify"),
-		jade		  = require('gulp-jade');
+		jade		  = require('gulp-jade'),
+		sourcemaps = require('gulp-sourcemaps');
 		// rsync         = require('gulp-rsync');
 
 gulp.task('browser-sync', function() {
@@ -27,11 +28,16 @@ gulp.task('browser-sync', function() {
 
 gulp.task('styles', function() {
 	return gulp.src('myapp/'+syntax+'/**/*.'+syntax+'')
-	.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
-	.pipe(rename({ suffix: '.min', prefix : '' }))
-	.pipe(autoprefixer(['last 15 versions']))
-	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
+	.pipe(sourcemaps.init())
+		.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
+		.pipe(rename({ suffix: '.min', prefix : '' }))
+		.pipe(autoprefixer(['last 15 versions']))
+		.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
+	
+
+	.pipe(sourcemaps.write('../maps'))
 	.pipe(gulp.dest('myapp/css'))
+	
 	.pipe(browserSync.stream())
 });
 
@@ -45,8 +51,10 @@ gulp.task('js', function() {
 		// 'myapp/libs/fancybox/jquery.fancybox.js'
 		// 'myapp/js/custom.js', // Always at the end
 		])
-	.pipe(concat('libs.min.js'))
-	.pipe(uglify()) // Mifify js (opt.)
+	.pipe(sourcemaps.init())
+		.pipe(concat('libs.min.js'))
+		.pipe(uglify()) // Mifify js (opt.)
+	.pipe(sourcemaps.write('../maps'))
 	.pipe(gulp.dest('myapp/assets/js'))
 	.pipe(browserSync.reload({ stream: true }))
 });

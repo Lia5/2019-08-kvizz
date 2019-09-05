@@ -94,13 +94,12 @@ ul,li {
 	margin-bottom: 25px
 }
 .subtitle {
-	// font-family: $title-font;
-	text-transform: uppercase;
-	font-size: 16px;
-	line-height: 20px;
-	/* identical to box height */
-	letter-spacing: 0.27em;
-	color: rgba(62, 70, 83, 0.43);
+	// font-weight: 700;
+	// font-size: 36px;
+	// text-align: center;
+	// color: #fff;
+	// text-align: center;
+	// text-transform: uppercase;
 
 }
 .title {
@@ -118,22 +117,30 @@ ul,li {
 // }
 .kviz-btn {
 	position: relative;
-	display: inline-block;
-	font-size: 24px;
 	font-weight: 600;
-	color: #fff;
-	padding: 12px 45px;
-	margin: 25px auto;
+	margin: 0 auto;
 	transition: 0.5s;
 	cursor: pointer;
-	background: #000;
-	border: 1px solid #000;
-	min-width: 295px;
-    text-align: center;
-	&:hover {
-		background-color: rgba(255, 255, 255, 0.5);
-		color: #000;
+	text-align: center;
+	max-width: 303px;
+	a {
+		font-size: 24px;
+		display: block;
+		background: #000;
+		border: 5px solid #000;
+		color: #fff;
+		padding: 12px 45px;
 	}
+	&:hover {
+		a {
+			color: #000;
+			background-color: #fff;
+		}
+		
+	}
+}
+p {
+	margin: 0;
 }
 .items {
 	display: flex;
@@ -147,13 +154,232 @@ ul,li {
 	align-items: center;
 	text-align: center;
 }
+
+.page {
+    &__header {
+        position: relative;
+        border-bottom: 10px solid #000;
+        padding-bottom: 104px;
+        background: $red;
+        font-size: 24px;
+        font-weight: 500;
+        z-index: 1;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("../assets/img/dots-bg-linear.png") no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+        &-text {
+            padding: 59px 72px;
+            max-width: 535px;
+            height: 465px;
+            background: url("../assets/img/cat-hands.png") no-repeat;
+            background-position: top -78px center;
+            background-size: 100%;
+            margin: 0 auto;
+            font-weight: 800;
+            font-size: 18px;
+            text-align: center;
+			text-transform: uppercase;
+			&--bigger {
+				font-size: 24px;
+				font-weight: 800;
+			}
+            p {
+                margin: 0;
+            }
+        }
+        .wrap {
+            text-align: center;
+        }
+	}
+	&__directions {
+		z-index: 2;
+		position: relative;
+		margin-top: -89px;
+		overflow: hidden;
+		font-weight: 600;
+		.slick-list {
+			width: 100%;
+		}
+		.slick-track {
+			padding: 60px 0;
+			display: flex;
+			justify-content: space-between;
+			// width: 100%!important;
+		}
+		&-item {
+			position: relative;
+			display: block!important;
+			margin: 0 auto;
+            z-index: 1;
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                z-index: -2;
+            }
+		}
+		&-text {
+			span {
+				text-decoration: underline;
+			}
+		}
+		.slick-slide:nth-child(1) {
+			.page__directions-item {
+				max-width: 254px;
+				&:before {
+					top: -40%;
+					right: -36%;
+					width: 166%;
+					height: 155%;
+					transform: skew(18deg,1deg);
+					background-color: $yellow;
+					border: 10px solid #000;
+				}
+				.page__directions-wrap {
+					position: relative;
+					&:before {
+						content: "";
+						position: absolute;
+						top: -2%;
+						right: -40%;
+						width: 173%;
+						height: 181%;
+						transform: skew(18deg,1deg);
+						background: url("../assets/img/dots.jpg");
+						z-index: -2;
+					}
+				}
+				.page__directions-text {
+					
+				}
+			}			
+		}
+
+        .slick-slide:nth-child(2) {
+			.page__directions-item {
+				max-width: 233px;
+				&:before {
+					top: 18%;
+					right: -27%;
+					width: 153%;
+					height: 113%;
+					transform: skew(8deg,5deg);
+					background: linear-gradient(11deg, $yellow 50%, rgba(255, 255, 255, 0) 50% );
+					border-left: 10px solid #000;
+					border-bottom: 10px solid #000;
+				}
+				&:after {
+					top: -42%;
+					right: -35%;
+					width: 166%;
+					height: 216%;
+					transform: skew(-14deg,-1deg);
+					background-color: $yellow;
+					background: linear-gradient(14deg, rgba(255, 255, 255, 0) 50%, $yellow 50%);
+					border-right: 10px solid #000;
+					border-top: 10px solid #000;
+				}  
+				.page__directions-wrap {
+					position: relative;
+					&:before {
+						content: "";
+						position: absolute;
+						top: 50%;
+						right: -33%;
+						width: 166%;
+						height: 122%;
+						transform: skew(8deg,5deg);
+						background: url("../assets/img/dots.jpg");
+						z-index: -2;
+					}
+					&:after {
+						content: "";
+						position: absolute;
+						top: -21%;
+						right: -38%;
+						width: 26%;
+						height: 204%;
+						transform: skew(-14deg,9deg);
+						background-color: $yellow;
+						background: url("../assets/img/dots.jpg");
+						z-index: -2;
+					} 
+				}    
+				.page__directions-text {
+					
+				}      
+			}
+		}
+        .slick-slide:nth-child(3) {
+			.page__directions-item {
+				max-width: 336px;
+				&:before {
+					top: 29%;
+					left: -12%;
+					width: 140%;
+					height: 108%;
+					transform: skew(-13deg,2deg);
+					background: linear-gradient(6deg, $yellow 50%, rgba(255, 255, 255, 0) 50% );
+					border-left: 10px solid #000;
+					border-bottom: 10px solid #000;
+				}
+				&:after {
+					top: -46%;
+					left: -12%;
+					width: 142%;
+					height: 237%;
+					transform: skew(-8deg,-3deg);
+					background-color: $yellow;
+					background: linear-gradient(10deg, rgba(255, 255, 255, 0) 50%, $yellow 50%);
+					border-right: 10px solid #000;
+					border-top: 10px solid #000;
+				}        
+				.page__directions-wrap {
+					position: relative;
+					&:before {
+						content: "";
+						position: absolute;
+						top: 27%;
+						left: -14%;
+						width: 148%;
+						height: 151%;
+						transform: skew(-13deg,2deg);
+						background: url("../assets/img/dots.jpg");
+						z-index: -2;
+					}
+			
+				}
+				.page__directions-text {
+					
+				}    
+			}
+		}
+		&-text {
+			min-height: 2.35em;
+		}
+		&-wrap {
+
+		}
+	}
+}
 @import "sections/nav"; 
 @import "sections/contacts"; 
 @import "sections/schedule";
+@import "sections/franchise";
+@import "sections/corporate";
 
-
-// @import "sections/consult";
-// @import "sections/events";
 // @import "sections/diploms";
 @import "sections/footer"; 
 

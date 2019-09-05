@@ -1,17 +1,73 @@
 $(function() {
-
 //slider bio
-if(jQuery('.bio__slider').length) {
-    $('.bio__slider').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      infinite: false,
-      arrows: true,
-      dots: false,
-      prevArrow: '<div class="arrow-prev"></div>',
-      nextArrow: '<div class="arrow-next"></div>'
-    });
-}
+        if(jQuery('.items-slider').length) {
+            $('.items-slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows: false,
+            dots: false,
+            //   prevArrow: '<div class="arrow-prev"></div>',
+            //   nextArrow: '<div class="arrow-next"></div>'
+            responsive: [
+                {
+                  breakpoint: 1239,
+                  settings: {
+                    slidesToShow: 1,
+                    centerMode: true,
+                    centerPadding: '100px',
+                  }
+                },
+                {
+                  breakpoint: 630,
+                  settings: {
+                    slidesToShow: 1,
+                    centerMode: true,
+                    centerPadding: '80px',
+                  }
+                },
+                {
+                  breakpoint: 570,
+                  settings: {
+                    slidesToShow: 1,
+                    centerMode: true,
+                    centerPadding: '10%',
+                  }
+                }
+              ]
+            });
+        }
+//corporate-slider
+        if(jQuery('.corporate-slider').length) {
+            $('.corporate-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows: true,
+            dots: false,
+            prevArrow: '<div class="arrow-prev"></div>',
+            nextArrow: '<div class="arrow-next"></div>',
+            responsive: [
+                {
+                  breakpoint: 15000,
+                  settings: "unslick"
+                },
+                {
+                  breakpoint: 1239,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: false,
+                    arrows: true,
+                    dots: false,
+                    prevArrow: '<div class="arrow-prev"></div>',
+                    nextArrow: '<div class="arrow-next"></div>',
+                  }
+                }
+              ]
+            });
+        }
+
 
 // MAP
     
