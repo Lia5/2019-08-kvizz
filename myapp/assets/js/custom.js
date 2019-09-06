@@ -90,6 +90,37 @@ $(function() {
               ]
             });
         }
+//corporate-slider
+if(jQuery('.sertificate__gifts-slider').length) {
+    $('.sertificate__gifts-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: false,
+    arrows: true,
+    dots: false,
+    prevArrow: '<div class="arrow-prev"></div>',
+    nextArrow: '<div class="arrow-next"></div>',
+    responsive: [
+        {
+          breakpoint: 15000,
+          settings: "unslick"
+        },
+        {
+          breakpoint: 1239,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows: true,
+            dots: false,
+            prevArrow: '<div class="arrow-prev"></div>',
+            nextArrow: '<div class="arrow-next"></div>',
+          }
+        }
+      ]
+    });
+}
+
 
         
 // MAP
