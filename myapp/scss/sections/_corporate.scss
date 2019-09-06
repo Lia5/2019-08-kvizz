@@ -117,4 +117,69 @@
             text-transform: uppercase;
         }
     }
+    &__qa {
+        position: relative;
+        background: #ff004c;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        &:after {
+            content: "";
+            position: absolute;
+            top: -55px;
+            left: 0;
+            width: 110%;
+            height: 97px;
+            transform: skew(-4deg,3deg);
+            background: #ff004c;
+            border-top: 10px solid #000;
+        }
+        .title {
+            max-width: 890px;
+            margin: 0 auto 20px;
+        }
+    }
+    &__how {
+        background: #ff004c;
+        padding-bottom: 100px;
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -66px;
+            left: 0;
+            width: 110%;
+            height: 130px;
+            transform: skew(-4deg,3deg);
+            background: #ff004c;
+            border-bottom: 10px solid #000;
+        }
+    }
+    &__partners {
+        background: #14a1cc;
+        padding-top: 150px;
+        padding-bottom: 42px;
+        &-slider {
+            display: flex;
+            background: $yellow;
+            border: 10px solid #000;
+            max-width: 1052px;
+            margin: 0 auto 100px;
+            padding: 20px 0;
+            img {
+                max-width: 160px;
+                margin: 0 auto;
+            }
+        }
+        .title {
+            margin-bottom: 20px;
+        }
+        p {
+            color: #fff;
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            max-width: 1052px;
+            margin: 0 auto 40px;
+        }
+    }
 }

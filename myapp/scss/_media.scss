@@ -42,7 +42,7 @@
     }
 }
 @media only screen and (max-width: 1239px) {
-    .schedule {
+    .partners {
         &__whom-item {
             &:nth-child(1) {
                 &:before {
@@ -180,7 +180,7 @@
             align-self: flex-start;
         }
     }
-    .schedule {
+    .partners {
         &__whom {
             margin-bottom: 0;
             &-item {
@@ -225,7 +225,7 @@
     .title {
         font-size: 27px;
     }
-    .schedule {
+    .partners {
         &__how {
             &:after {
                 background-size: 45%;
@@ -303,7 +303,7 @@
     }
 }
 @media only screen and (max-width: 720px) {
-    .schedule {
+    .partners {
         &__whom {
             margin-bottom: 0;
             &-item {
@@ -316,7 +316,7 @@
                     &:before {
                         content: none;
                     }
-                    .schedule__icon {
+                    .partners__icon {
                         max-width: 31px;
                     }
                 }
@@ -446,7 +446,7 @@
             }
         }
     }
-    .schedule {
+    .partners {
 
         &__whom {
             padding: 84px 0 64px;

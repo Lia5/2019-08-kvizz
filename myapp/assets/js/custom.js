@@ -68,7 +68,30 @@ $(function() {
             });
         }
 
+//.corporate__partners-slider
 
+        if(jQuery('.corporate__partners-slider').length) {
+            $('.corporate__partners-slider').slick({
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            infinite: false,
+            arrows: true,
+            dots: false,
+            prevArrow: '<div class="arrow-prev"></div>',
+            nextArrow: '<div class="arrow-next"></div>',
+            responsive: [
+                {
+                  breakpoint: 1239,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  }
+                }
+              ]
+            });
+        }
+
+        
 // MAP
     
 ymaps.ready(init);
