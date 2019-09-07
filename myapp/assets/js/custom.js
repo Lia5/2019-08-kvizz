@@ -90,7 +90,7 @@ $(function() {
               ]
             });
         }
-//corporate-slider
+//sertificate__gifts-slider
 if(jQuery('.sertificate__gifts-slider').length) {
     $('.sertificate__gifts-slider').slick({
     slidesToShow: 1,
@@ -120,7 +120,32 @@ if(jQuery('.sertificate__gifts-slider').length) {
       ]
     });
 }
-
+//sertificate__atrib
+if(jQuery('.sertificate__atribs').length) {
+    $('.sertificate__atribs').slick({
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    infinite: true,
+    arrows: true,
+    dots: false,
+    prevArrow: '<div class="arrow-prev"></div>',
+    nextArrow: '<div class="arrow-next"></div>',
+    responsive: [
+        {
+          breakpoint: 1239,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            arrows: true,
+            dots: false,
+            prevArrow: '<div class="arrow-prev"></div>',
+            nextArrow: '<div class="arrow-next"></div>',
+          }
+        }
+      ]
+    });
+}
 
         
 // MAP

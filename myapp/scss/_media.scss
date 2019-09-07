@@ -595,6 +595,17 @@
         }
     
     }
+    .slick-arrow {
+        width: 38px;
+        height: 29px;
+    }
+    .arrow-prev {
+        left: 40px;
+    }
+    .arrow-next {
+        right: 33px;
+    }
+    
 }
 @media only screen and (max-width: 419px) {
     .page {

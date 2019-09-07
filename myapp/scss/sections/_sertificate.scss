@@ -1,4 +1,5 @@
 .sertificate {
+    padding-top: 74px;
     background: #ff004c;
     &__gifts {
         display: flex;
@@ -9,6 +10,7 @@
         background: $yellow;
         padding: 40px;
         width: 95%;
+        height: 100%;
         max-width: 285px;
         margin: 0 auto;
         min-height: 374px;
@@ -24,21 +26,38 @@
             &:after {
                 content: "";
                 position: absolute;
-                top: 5%;
-                left: 4%;
+                top: 15px;
+                left: 20px;
                 width: 100%;
                 max-width: 285px;
                 left: 54%;
                 margin-right: -50%;
                 transform: translate(-50%, 0);
                 height: 100%;
-                background: url(../assets/img/dots.jpg);
+                background: url("../assets/img/dots.jpg");
                 z-index: -1;
             }
         }
 
         .kviz-btn {
             margin-top: auto;
+        }
+    }
+    &__foto {
+        position: relative;
+        img {
+            width: 100%;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("../assets/img/gifts/gift-border.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
         }
     }
     &__name {
@@ -52,5 +71,37 @@
         font-size: 24px;
         font-weight: 700;
         text-align: center;
+    }
+    &__atribs {
+        display: flex;
+    }
+    &__atrib {
+        min-height: 296px;
+        &-wrap {
+            position: relative;
+            z-index: 1;
+            width: 33%;
+            width: calc(100% / 3);
+            margin-bottom: 40px;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 15px;
+                left: 20px;
+                width: 100%;
+                max-width: 285px;
+                left: 54%;
+                margin-right: -50%;
+                transform: translate(-50%, 0);
+                height: 100%;
+                background: #14a1cc;
+                z-index: -1;
+            }
+        }
+        &-foto {
+            img {
+                width: 100%;
+            }
+        }
     }
 }

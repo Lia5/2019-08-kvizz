@@ -94,12 +94,12 @@ ul,li {
 	margin-bottom: 25px
 }
 .subtitle {
-	// font-weight: 700;
-	// font-size: 36px;
-	// text-align: center;
-	// color: #fff;
-	// text-align: center;
-	// text-transform: uppercase;
+	font-weight: 700;
+	font-size: 30px;
+	text-align: center;
+	color: #fff;
+	margin: 50px auto;
+	text-transform: uppercase;
 
 }
 .title {
@@ -374,6 +374,30 @@ p {
 		}
 	}
 }
+.slick-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	width: 68px;
+	height: 46px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 1;
+	cursor: pointer;
+	&:hover {
+		opacity: 0.8;
+	}
+}
+.arrow-prev {
+	left: 28px;
+	background-image: url("../assets/img/icons/slider-left.png");
+}
+.arrow-next {
+	right: 7px;
+	background-image: url("../assets/img/icons/slider-right.png");
+}
+
+
 @import "sections/nav"; 
 @import "sections/contacts"; 
 @import "sections/partners";
