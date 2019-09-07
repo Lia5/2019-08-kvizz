@@ -1,3 +1,47 @@
 .rating {
-    
+    padding: 82px 0;
+    background: #ff004c;
+    .title {
+        margin-bottom: 40px;
+    }
+    .schedule__filters {
+        padding: 0 27px;
+        margin-bottom: 20px;
+    }
+    .jq-selectbox {
+        margin: 0 4% 0 0;
+    }
+    &__body {
+        background-color: $yellow;
+        border: 10px solid #000;
+    }
+    &__title {
+        &--desctop {
+            display: flex;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        &--mobile {
+            display: none;
+        }
+    }
+    &__item {
+        display: flex;
+        font-weight: 700;
+    }
+    &__data {
+        flex-basis: 0;
+        flex-grow: 1;
+        padding: 10px;
+        &--center {
+            text-align: center;
+        }
+    }
+    &__tit {
+        display: flex;
+        &-icon {
+            width: 31px;
+            margin-right: 5px;
+        }
+    }
 }

@@ -23,16 +23,7 @@
         justify-content: space-between;
         font-weight: 600;
     }
-    &__filter {
-        &:nth-child(3) .jq-selectbox__select {
-            &:before {
-                transform: skew(12deg,0deg);
-            }
-            &:after {
-                transform: skew(-16deg,0deg);
-            }            
-        }
-    }
+
     &__items {
         display: flex;
         flex-wrap: wrap;
@@ -58,7 +49,6 @@
                 left: 15px;
                 width: 92%;
                 height: 98%;
-                
                 background: url(../assets/img/dots.jpg);
                 background-repeat: repeat;
                 background-size: contain;
@@ -77,6 +67,7 @@
         &-top {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             font-size: 24px;
             font-weight: 600;
             padding-bottom: 5px;
@@ -102,8 +93,6 @@
 }
 .jq-selectbox__select {
     height: auto;
-    max-width: 260px;
-    margin: 0 auto;
     padding: 10px;
     background-color: $yellow;
     // background: blue;
@@ -116,10 +105,8 @@
         content: "";
         position: absolute;
         top: -10px;
-       
         width: 28px;
         height: 100%;
-        
         background-color: $yellow;
         border-top: 10px solid #000;
         border-bottom: 10px solid #000;
@@ -151,11 +138,23 @@
         }
     }
 }
+.filter--other {
+    .jq-selectbox__select {
+        &:before {
+            transform: skew(12deg,0deg);
+        }
+        &:after {
+            transform: skew(-16deg,0deg);
+        }            
+    }
+}
 .jq-selectbox__dropdown {
     border: 10px solid #000;
     background: $yellow;
 }
 .jq-selectbox {
+    max-width: 179px;
+    margin: 0 auto;
     &.focused .jq-selectbox__select  {
         background-color: $yellow;
     }
@@ -173,4 +172,85 @@
 }
 .opened .jq-selectbox__select {
 border-color: #000;
+}
+.filter {
+    .jq-selectbox__select {
+        max-width: 179px;
+        border-width: 7px;
+        &:before, &:after {
+            border-width: 7px;
+            top: -7px;
+
+        }
+    }
+    &-search {
+        position: relative;
+        margin-left: auto;
+        border-top: 7px solid #000;
+        border-bottom: 7px solid #000;
+        background-color: #ffee1a;
+        position: relative;
+        z-index: 1;
+        
+        background-position: right center;
+        background-size: 27px;
+        &-wrap {
+            position: relative;
+            margin-left: auto;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 14px;
+                right: 0;
+                width: 25px;
+                height: 25px;
+                background: url('../assets/img/icons/glass.png') no-repeat;
+                z-index: 2;
+            }
+            
+        }
+        input {
+            max-width: 179px;
+            padding: 9px;
+            background-color: transparent;
+            border: none;
+        }
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            top: -7px;
+            width: 28px;
+            height: 100%;
+            background-color: $yellow;
+            border-top: 7px solid #000;
+            border-bottom: 7px solid #000;
+            z-index: -1;
+        }
+        &:before {
+            left: -25px;
+            transform: skew(12deg,0deg);
+            border-left: 7px solid #000;
+            z-index: -1;
+        }
+        &:after {
+            right: -25px;
+            transform: skew(-16deg,0deg);
+            border-right: 7px solid #000;
+            z-index: -2;
+        }
+    
+        &:hover {
+            background-color: $yellow;
+            &:before, &:after {
+                background-color: $yellow;
+            }
+        }
+        &:active {
+            background-color: $yellow;
+            &:before, &:after {
+                background-color: $yellow;
+            }
+        }
+    }
+   
 }
