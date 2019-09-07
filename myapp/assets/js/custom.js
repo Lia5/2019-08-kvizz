@@ -1,4 +1,8 @@
 $(function() {
+    if(jQuery('.styled').length) {
+        $('.styled').styler();
+    }
+ $('.styled').styler();
 //slider bio
         if(jQuery('.items-slider').length) {
             $('.items-slider').slick({

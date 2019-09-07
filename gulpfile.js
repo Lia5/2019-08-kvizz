@@ -48,6 +48,7 @@ gulp.task('js', function() {
 		// 'myapp/libs/intl-tel-input/js/intlTelInput.js',
 		'myapp/libs/3.mask/jquery.maskedinput.min.js',
 		'myapp/libs/2.slick/slick.js',
+		'myapp/libs/jquery-formstyler/jquery-formstyler.js'
 		// 'myapp/libs/fancybox/jquery.fancybox.js'
 		// 'myapp/js/custom.js', // Always at the end
 		])
