@@ -774,3 +774,34 @@
         }
     }
 }
+
+@media only screen and (min-width: 1035px) {
+    .arrow-prev.arrow-prev--desctop {
+        width: 15px;
+        height: 15px;
+        top: 26px;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, 0) rotate(45deg);
+        background-image: none;
+        border-left: 4px solid $yellow;
+        border-top: 4px solid $yellow;
+    }
+    .arrow-next.arrow-next--desctop {
+        width: 15px;
+        height: 15px;
+        top: auto;
+        bottom: 26px;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, 0) rotate(45deg);
+        border-right: 4px solid $yellow;
+        border-bottom: 4px solid $yellow;
+    }
+    // .index__vk-full {
+    //     display: none;
+    // }
+    // .index__vk-nav {
+    //     width: 100%;
+    // }
+}

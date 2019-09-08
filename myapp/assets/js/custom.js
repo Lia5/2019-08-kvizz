@@ -150,57 +150,35 @@ if(jQuery('.sertificate__atribs').length) {
       ]
     });
 }
-//index__soon
-if(jQuery('.index__soon').length) {
-    $('.index__soon').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    infinite: true,
-    arrows: true,
-    dots: false,
-    prevArrow: '<div class="arrow-prev"></div>',
-    nextArrow: '<div class="arrow-next"></div>',
-    asNavFor: ".index-map",
-    responsive: [
-        {
-          breakpoint: 1239,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            arrows: true,
-            dots: false,
-            prevArrow: '<div class="arrow-prev"></div>',
-            nextArrow: '<div class="arrow-next"></div>',
-          }
-        }
-      ]
-    });
-}
 if(jQuery('.index-map').length) {
-    $('.index-map').slick({
+  $('.index-map').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    infinite: true,
     arrows: false,
+    fade: true,
+    asNavFor: '.index__soon'
+  });
+  $('.index__soon').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.index-map',
     dots: false,
-    asNavFor: ".index__soon",
+    // centerMode: true,
     focusOnSelect: true,
+    prevArrow: '<div class="arrow-prev"></div>',
+    nextArrow: '<div class="arrow-next"></div>',
     responsive: [
-        {
-          breakpoint: 1239,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            arrows: false,
-            dots: false,
-            focusOnSelect: true,
-          }
+      {
+        breakpoint: 1239,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
         }
-      ]
-    });
+      }
+    ]
+  });
 }
+
 if(jQuery('.index__example-slider').length) {
     $('.index__example-slider').slick({
     slidesToShow: 3,
@@ -241,7 +219,64 @@ if(jQuery('.accordeon').length) {
 		}
   });
 }
+//vk
+if(jQuery('.index__vk-full').length) {
+  $('.index__vk-full').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.index__vk-nav'
+  });
+  $('.index__vk-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.index__vk-full',
+    dots: false,
+    // centerMode: true,
+    focusOnSelect: true,
+    prevArrow: '<div class="arrow-prev arrow-prev--desctop"></div>',
+    nextArrow: '<div class="arrow-next arrow-next--desctop"></div>',
+    vertical: true,
+    responsive: [
+      {
+        breakpoint: 1036,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
+  });
+}
 
+//inst
+if(jQuery('.index__inst-slider').length) {
+  $('.index__inst-slider').slick({
+  slidesToShow: 6,
+  slidesToScroll: 6,
+  infinite: true,
+  arrows: true,
+  dots: false,
+  prevArrow: '<div class="arrow-prev"></div>',
+  nextArrow: '<div class="arrow-next"></div>',
+  asNavFor: ".index__soon",
+  responsive: [
+      {
+        breakpoint: 1239,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true,
+          dots: false,
+          prevArrow: '<div class="arrow-prev"></div>',
+          nextArrow: '<div class="arrow-next"></div>',
+        }
+      }
+    ]
+  });
+}
 
 
 // MAP
