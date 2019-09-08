@@ -211,7 +211,7 @@ if(jQuery('.accordeon').length) {
   $('.accordeon__content').hide();
   
   $('.accordeon__title').click(function(){
-    $(this).parent().toggleClass('active').siblings().removeClass('active');
+    $(this).parent().parent().toggleClass('active').siblings().removeClass('active');
     $('.accordeon__content').slideUp();
     
     if(!$(this).next().is(":visible")) {
@@ -240,10 +240,11 @@ if(jQuery('.index__vk-full').length) {
     vertical: true,
     responsive: [
       {
-        breakpoint: 1036,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          vertical: false,
         }
       }
     ]
@@ -265,13 +266,15 @@ if(jQuery('.index__inst-slider').length) {
       {
         breakpoint: 1239,
         settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 630,
+        settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          arrows: true,
-          dots: false,
-          prevArrow: '<div class="arrow-prev"></div>',
-          nextArrow: '<div class="arrow-next"></div>',
+          slidesToScroll: 1
         }
       }
     ]
