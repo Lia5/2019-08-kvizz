@@ -326,7 +326,7 @@
         .schedule {
             &__filters {
                 flex-wrap: wrap;
-                flex-direction: column-reverse;
+                flex-direction: column;
             }
             &__filter {
                 margin-bottom: 10px;
@@ -345,13 +345,8 @@
                         width: 96%;
                     }
                 }
-                &-top {
-                    font-size: 22px;
-                }
             }
-            &_descr {
-                font-size: 14px;
-            }
+
         }
         .jq-selectbox__select {
             max-width: none;

@@ -150,8 +150,100 @@ if(jQuery('.sertificate__atribs').length) {
       ]
     });
 }
+//index__soon
+if(jQuery('.index__soon').length) {
+    $('.index__soon').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: true,
+    dots: false,
+    prevArrow: '<div class="arrow-prev"></div>',
+    nextArrow: '<div class="arrow-next"></div>',
+    asNavFor: ".index-map",
+    responsive: [
+        {
+          breakpoint: 1239,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            arrows: true,
+            dots: false,
+            prevArrow: '<div class="arrow-prev"></div>',
+            nextArrow: '<div class="arrow-next"></div>',
+          }
+        }
+      ]
+    });
+}
+if(jQuery('.index-map').length) {
+    $('.index-map').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: false,
+    dots: false,
+    asNavFor: ".index__soon",
+    focusOnSelect: true,
+    responsive: [
+        {
+          breakpoint: 1239,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            arrows: false,
+            dots: false,
+            focusOnSelect: true,
+          }
+        }
+      ]
+    });
+}
+if(jQuery('.index__example-slider').length) {
+    $('.index__example-slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    infinite: true,
+    arrows: true,
+    dots: false,
+    prevArrow: '<div class="arrow-prev"></div>',
+    nextArrow: '<div class="arrow-next"></div>',
+    asNavFor: ".index__soon",
+    responsive: [
+        {
+          breakpoint: 1239,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            arrows: true,
+            dots: false,
+            prevArrow: '<div class="arrow-prev"></div>',
+            nextArrow: '<div class="arrow-next"></div>',
+          }
+        }
+      ]
+    });
+}   
 
-        
+if(jQuery('.accordeon').length) {
+  // hide all content
+  $('.accordeon__content').hide();
+  
+  $('.accordeon__title').click(function(){
+    $(this).parent().toggleClass('active').siblings().removeClass('active');
+    $('.accordeon__content').slideUp();
+    
+    if(!$(this).next().is(":visible")) {
+			$(this).next().slideDown();
+		}
+  });
+}
+
+
+
 // MAP
     
 ymaps.ready(init);
