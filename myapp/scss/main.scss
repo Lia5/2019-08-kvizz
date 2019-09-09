@@ -55,7 +55,7 @@ b, strong {
 }
 .wrap {
 	max-width: 1364px;
-	padding: 0 62px;
+	padding: 0 40px;
 	margin: 0 auto;
 }
 a {
@@ -85,14 +85,15 @@ ul,li {
 	margin: 0;
 	padding: 0;
 }
-.main-title {
-	font-weight: 800;
-	font-size: 36px;
-	margin: 0 auto;
-	color: #fff;
-	text-align: center;
-	margin-bottom: 25px
-}
+// .main-title {
+// 	text-transform: uppercase;
+// 	font-weight: 700;
+// 	font-size: 36px;
+// 	margin: 0 auto;
+// 	color: #fff;
+// 	text-align: center;
+// 	margin-bottom: 25px
+// }
 .subtitle {
 	font-weight: 700;
 	font-size: 30px;
@@ -159,7 +160,7 @@ p {
     &__header {
         position: relative;
         border-bottom: 10px solid #000;
-        padding-bottom: 104px;
+        padding-bottom: 136px;
         background: $red;
         font-size: 24px;
         font-weight: 500;
@@ -176,15 +177,15 @@ p {
             z-index: -1;
         }
         &-text {
-            padding: 59px 72px;
             max-width: 535px;
-            height: 465px;
             background: url("../assets/img/cat-hands.png") no-repeat;
-            background-position: top -78px center;
-            background-size: 100%;
             margin: 0 auto;
             font-weight: 800;
-            font-size: 18px;
+			font-size: 18px;
+			height: 427px;
+			padding: 16px 84px;
+			background-position: top -103px center;
+			background-size: 95%;
             text-align: center;
 			text-transform: uppercase;
 			&--bigger {
@@ -194,7 +195,14 @@ p {
             p {
                 margin: 0;
             }
-        }
+		}
+		.kviz-btn {
+			max-width: 263px;
+			a {
+				font-size: 19px;
+				padding: 9px 23px;
+			}
+		}
         .wrap {
             text-align: center;
         }

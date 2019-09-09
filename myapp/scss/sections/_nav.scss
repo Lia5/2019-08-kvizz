@@ -49,9 +49,17 @@ nav {
     ul {
         display: flex;
         align-items: flex-end;
+        justify-content: space-between;
     }
     a  {
         display: block;
         padding: 16px;
+    }
+    .logo {
+        flex-grow: 1;
+        text-align: center;
+        a {
+            padding: 8px 8px 10px;
+        }
     }
 }

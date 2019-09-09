@@ -1,8 +1,14 @@
 .franchise {
     overflow: hidden;
+    .page__header {
+        padding-bottom: 80px;
+    }
+    .page__directions {
+        margin-bottom: 64px;
+    }
     &__body {
         background: #ff004c;
-        padding-bottom: 100px;
+        padding-bottom: 176px;
         position: relative;
 
         &:after {
@@ -18,7 +24,6 @@
         }
         .title {
             max-width: 800px;
-            margin: 0 auto;
         }
     }
     &__video {
@@ -86,16 +91,22 @@
 
     }
     &__why {
-        padding-top: 150px;
+        padding-top: 137px;
         padding-bottom: 55px;
         background: #14a1cc;
+        .kviz-btn {
+            max-width: 425px;
+            a {
+                font-size: 39px;
+            }
+        }
         .title {
             max-width: 536px;
             margin: 0 auto 20px;
         }
         &-items {
             max-width: 851px;
-            margin: 0 auto;
+            margin: 0 auto 171px;
             font-weight: 600;
             font-size: 22px;
         }
@@ -127,20 +138,20 @@
             }
             &:nth-child(odd) {
                 &:before {
-                    transform: skew(16deg, 0deg);
+                    transform: skew(8deg, 0deg);
                 }
                 p:after {
-                    right: 0;
+                    right: -22px;
                     background-image: url("../assets/img/arrow-right.png");
                 }
             }
             &:nth-child(even) {
                 flex-direction: row-reverse;
                 &:before {
-                    transform: skew(-16deg, 0deg);
+                    transform: skew(-8deg, 0deg);
                 }
                 p:after {
-                    left: 0;
+                    left: -70px;
                     background-image: url("../assets/img/arrow-left.png");
                 }
             }  

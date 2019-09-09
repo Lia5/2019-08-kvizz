@@ -1,5 +1,16 @@
 .corporate {
     overflow: hidden;
+    .page__directions {
+        margin-bottom: 79px;
+        .title {
+            font-size: 30px;
+            margin-bottom: 0;
+        }
+    }
+    .page__header {
+        padding-bottom: 60px;
+    }
+
     &__body {
         background: #ff004c;
         padding-bottom: 100px;
@@ -8,7 +19,7 @@
         &:after {
             content: "";
             position: absolute;
-            bottom: -119px;
+            bottom: -149px;
             left: 0;
             width: 110%;
             height: 206px;
@@ -16,13 +27,18 @@
             background: #ff004c;
             border-bottom: 10px solid #000;
         }
+        .title {
+            max-width: 1210px;
+        }
     }
     &__gallery {
         display: flex;
         flex-wrap: wrap;
         position: relative;
-        margin-top: 100px;
+        max-width: 76%;
+        margin: 0 auto;
         padding-top: 68px;
+        padding: 68px 10% 0;
         z-index: 1;
         &:before {
             content: "";
@@ -35,23 +51,23 @@
             z-index: -1;
         }
         &:before {
-            top: 4%;
-            left: 4%;
-            width: 90%;
-            height: 101%;
+            top: 1%;
+            left: 6%;
+            width: 85%;
+            height: 109%;
             transform: skew(5deg,5deg);
-            background: linear-gradient(43deg, $yellow 50%, rgba(255, 255, 255, 0) 50% );
+            background: linear-gradient(55deg, $yellow 50%, rgba(255, 255, 255, 0) 50% );
             border-left: 10px solid #000;
             border-bottom: 10px solid #000;
         }
         &:after {
-            top: 0%;
+            top: -2%;
             left: -1%;
             width: 100%;
-            height: 108%;
+            height: 114%;
             transform: skew(-2deg,1deg);
             background-color: $yellow;
-            background: linear-gradient(42deg, rgba(255, 255, 255, 0) 50%, $yellow 50%);
+            background: linear-gradient(52deg, rgba(255, 255, 255, 0) 50%, $yellow 50%);
             border-right: 10px solid #000;
             border-top: 10px solid #000;
         }  
@@ -60,7 +76,15 @@
         text-align: center;
         &-wrap {
             width: 50%;
-            margin-bottom: 50px;
+            margin-bottom: 73px;
+            &:nth-child(2n+1) {
+                position: relative;
+                top: -50px;
+            }
+            &:nth-child(2n) {
+                position: relative;
+                top: 45px;
+            }
         }
     }
     &__title {
@@ -120,32 +144,39 @@
     &__qa {
         position: relative;
         background: #ff004c;
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 49px;
+        padding-bottom: 133px;
         &:after {
             content: "";
             position: absolute;
-            top: -55px;
+            top: -50px;
             left: 0;
             width: 110%;
-            height: 97px;
-            transform: skew(-4deg,3deg);
+            height: 87px;
+            transform: skew(0deg,2deg);
             background: #ff004c;
             border-top: 10px solid #000;
         }
         .title {
+            text-transform: initial;
             max-width: 890px;
-            margin: 0 auto 20px;
+            margin: 0 auto 46px;
+        }
+        .kviz-btn {
+            max-width: 427px;
+            a {
+                font-size: 39px;
+            }
         }
     }
     &__how {
         background: #ff004c;
-        padding-bottom: 100px;
+        padding-bottom: 0;
         position: relative;
         &:after {
             content: "";
             position: absolute;
-            bottom: -66px;
+            bottom: -56px;
             left: 0;
             width: 110%;
             height: 130px;
@@ -153,17 +184,20 @@
             background: #ff004c;
             border-bottom: 10px solid #000;
         }
+        .partners__how {
+            padding-top: 25px;
+        }
     }
     &__partners {
         background: #14a1cc;
-        padding-top: 150px;
+        padding-top: 103px;
         padding-bottom: 42px;
         &-slider {
             display: flex;
             background: $yellow;
             border: 10px solid #000;
             max-width: 1052px;
-            margin: 0 auto 100px;
+            margin: 0 auto 127px;
             padding: 20px 0;
             img {
                 max-width: 160px;
@@ -178,8 +212,20 @@
             text-align: center;
             font-size: 36px;
             font-weight: 700;
-            max-width: 1052px;
+            max-width: 1013px;
             margin: 0 auto 40px;
+        }
+        .arrow-prev {
+            left: -40px;
+        }
+        .arrow-next {
+            right: -51px;
+        }
+        .kviz-btn {
+            max-width: 427px;
+            a {
+                font-size: 39px;
+            }
         }
     }
 }

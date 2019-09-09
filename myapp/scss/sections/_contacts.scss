@@ -1,6 +1,6 @@
 .contacts {
     position: relative;
-    padding: 70px 0 22px;
+    padding: 64px 0 25px;
     background: $red;
     font-size: 24px;
     font-weight: 500;
@@ -19,15 +19,16 @@
     &__body {
         max-width: 1057px;
         margin: 0 auto;
-        padding: 82px 73px 109px 114px;
+        padding: 82px 73px 109px 107px;
         display: flex;
         justify-content: space-between;
         background: url("../assets/img/map-bg.png") no-repeat;
         background-size: 100% 100%;
     }
     &__info {
+        line-height: 1;
         width: 50%;
-        padding-top: 27px;
+        padding-top: 24px;
         padding-right: 20px;
         max-width: 308px;
         li {
@@ -36,30 +37,30 @@
     }
     &__icon {
         display: block;
-        width: 40px;
-        height: 40px;
-        min-width: 40px;
+        width: 35px;
+        height: 35px;
+        min-width: 35px;
         background-image: url("../assets/img/icons/icon-sprites.png");
         background-repeat: no-repeat; 
     }
     &__adress {
         margin-bottom: 28px;
         .contacts__icon {
-            background-position: -103px -47px;          
+            background-position: -39px -6px;         
         }
 
 
     }
     &__phone {
         font-weight: 700;
-        margin-bottom: 28px;
+        margin-bottom: 20px;
         .contacts__icon {
-            background-position: -150px -6px;
+            background-position: -157px -11px;
         }
     }
     &__mail {
         .contacts__icon {
-            background-position: -108px -6px;
+            background-position: -115px -6px;
         }
         span {
             font-weight: 900;
