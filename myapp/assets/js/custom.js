@@ -191,7 +191,7 @@ if(jQuery('.index__example-slider').length) {
     asNavFor: ".index__soon",
     responsive: [
         {
-          breakpoint: 1239,
+          breakpoint: 750,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
