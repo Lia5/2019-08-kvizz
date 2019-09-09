@@ -1017,6 +1017,9 @@
 
     }
     .rating {
+        .wrap {
+            padding: 0 20px;
+        }
         &__title {
             &--desctop {
                 display: none;
@@ -1036,6 +1039,10 @@
             background: $yellow;
             padding: 10px;
             margin-bottom: 20px;
+        }
+        &__data {
+            display: flex;
+            align-items: center;
         }
         &__data--center {
             display: flex;
