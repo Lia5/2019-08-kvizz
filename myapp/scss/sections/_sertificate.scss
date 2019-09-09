@@ -1,10 +1,19 @@
 .sertificate {
-    padding-top: 74px;
+    padding-top: 83px;
     background: #ff004c;
+    .title {
+        font-size: 45px;
+        margin-bottom: 56px;
+    }
+    .kviz-btn a {
+        font-size: 17px;
+        padding: 5px 47px;
+    }
     &__gifts {
         display: flex;
         flex-wrap: wrap;
-
+        max-width: 1040px;
+        margin: 0 auto 129px;
     }
     &__gift {
         background: $yellow;
@@ -62,7 +71,7 @@
     }
     &__name {
         margin: 10px 0;
-        font-size: 17px;
+        font-size: 16px;
         font-weight: 600;
         text-align: center;
 
@@ -74,6 +83,9 @@
     }
     &__atribs {
         display: flex;
+        max-width: 1040px;
+        margin: 0 auto;
+        padding-bottom: 100px;
     }
     &__atrib {
         min-height: 296px;
@@ -103,5 +115,15 @@
                 width: 100%;
             }
         }
+    }
+    .arrow-prev {
+        left: 3px;
+
+    }
+    .arrow-next {
+        right: -22px;
+    }
+    .slick-arrow {
+        top: 37%;
     }
 }

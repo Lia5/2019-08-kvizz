@@ -155,7 +155,12 @@
         }
         
     }
-
+    .sertificate__gifts, .sertificate__atribs {
+        max-width: 400px;
+    }
+    .corporate__partners-slider {
+        max-width: 500px;
+    }
 }
 @media only screen and (max-width: 1092px) {
     .jq-selectbox__select {
@@ -190,7 +195,7 @@
         z-index: 3;
         .one, .two, .three {
             width: 100%;
-            height: 5px;
+            height: 3px;
             background: #14a1cc;
             margin: 6px auto;
             backface-visibility: hidden;
@@ -202,6 +207,7 @@
             left: auto;
             border-radius: 50%;
             background: #ff004c;
+            padding-top: 7px;
             .one,
             .three {
                 width: 50%;
@@ -517,8 +523,18 @@
             font-size: 19px;
         }
     }
-
-
+    .sertificate {
+        padding-top: 12px;
+        .title {
+            font-size: 24px;
+        }
+        .sertificate__gifts {
+            margin: 0 auto;
+        }
+    }
+    .subtitle {
+        font-size: 22px;
+    }
 }
 @media only screen and (max-width: 749px) {
     .index__example-slider {
