@@ -1287,3 +1287,19 @@
     //     width: 100%;
     // }
 }
+@media only screen and (min-width: 1365px) {
+    .header .page__header-text {
+        font-size: 30px;
+        // max-width: none;
+    }
+    .header__text {
+        font-size: 18px;
+    }
+    .header .kviz-btn {
+        top: auto;
+        bottom: 13vw;
+        left: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

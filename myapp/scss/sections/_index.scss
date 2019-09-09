@@ -9,7 +9,7 @@
             margin: 0;
             // left: -92px;
             height: 41vw;
-            padding: 163px 8px 103px 25vw;
+            padding: 183px 8px 103px 23vw;
             font-size: 30px;
             font-size: 2.2vw;
             text-align: left;
@@ -37,11 +37,11 @@
         &:before {
             content: "";
             position: absolute;
-            right: 16px;
+            right: 80px;
             background-image: url(../assets/img/arrow-right.png);
             background-repeat: no-repeat;
             background-size: 100% 100%;
-            top: 0;
+            top: 10px;
             width: 104px;
             height: 101px;
             background-repeat: no-repeat;
@@ -261,47 +261,52 @@
             position: absolute;
             max-width: 320px;
             text-align: center;
-            padding: 51px 51px 64px;
+            
+            padding: 74px 71px 61px;
             background-position: center;
             background-repeat: no-repeat;
             &:nth-child(1) {
+                padding: 51px 59px 61px;
                 top: 10%;
                 right: 0;
                 background-image: url(../assets/img/sky5.png);
             }
             &:nth-child(2) {
+                padding: 74px 39px 61px 72px;
                 top: 35%;
                 right: 0;
                 background-image: url(../assets/img/sky6.png);
             }
             &:nth-child(3) {
                 top: 55%;
-                right: 0;
+                right: 5%;
                 background-image: url(../assets/img/sky7.png);
             }
             &:nth-child(4) {
                 top: 70%;
-                right: 0;
+                right: 15%;
                 background-image: url(../assets/img/sky8.png);
             }
             &:nth-child(5) {
+                padding: 51px 59px 61px;
                 top: 10%;
                 left: 0;
                 background-image: url(../assets/img/sky1.png);
             }
             &:nth-child(6) {
+                padding: 63px 79px 61px 41px;
                 top: 35%;
                 left: 0;
                 background-image: url(../assets/img/sky2.png);
             }
             &:nth-child(7) {
                 top: 55%;
-                left: 0;
+                left: 5%;
                 background-image: url(../assets/img/sky3.png);
             }
             &:nth-child(8) {
                 top: 70%;
-                left: 0;
+                left: 15%;
                 background-image: url(../assets/img/sky4.png);
             }
         }
