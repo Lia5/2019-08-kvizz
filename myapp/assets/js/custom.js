@@ -21,7 +21,7 @@ $(function() {
   modal.addClass('flex');
   // body.addClass('body-modal');
 });
- $('#modal-close').click(function (){
+ $('.modal-close').click(function (){
 
   modalWrap.removeClass('fadeInDown');
   modalWrap.addClass('fadeOutUp');
