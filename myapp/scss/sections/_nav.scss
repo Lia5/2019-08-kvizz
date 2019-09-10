@@ -20,17 +20,51 @@ nav {
         padding-left: 23px;
         font-weight: 400;
         text-decoration: underline;
-        background: url("../assets/img/icons/city.png") no-repeat left center;
+        background: url("../assets/img/icons/city.png") no-repeat left top;
         &:hover {
             text-decoration: none;
         }
-        &-select {
-            padding: 5px;
-        }
+
     }
     &__mobile {
         display: none;
     }
+}
+.city {
+    position: absolute;
+    &__text {
+        padding: 5px;
+        cursor: pointer;
+    }
+    &__item {
+        color: #fff;
+        cursor: pointer;
+        padding: 8px;
+        width: 30%;
+        &:hover {
+            color: #ffee1a;
+        }
+    }
+    .city__wrap {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 700px;
+        flex-wrap: wrap;
+        padding: 10px;
+        display: none;
+        background: #010101;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        z-index: 2;
+
+        &.active {
+            display: flex;
+        }
+    }
+
+
 }
 .menu-toggle {
     display: none;
