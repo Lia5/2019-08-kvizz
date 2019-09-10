@@ -1,4 +1,4 @@
-#modalForm.modal.disabled
+#modalFranchise.modal.disabled
     .modal__wrap.animated.fadeInDown
         .close#modal-close
             svg.t-popup__close-icon(width='23px', height='23px', viewBox='0 0 23 23', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
@@ -6,23 +6,23 @@
                     rect(transform='translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
                     rect(transform='translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
         .modal__body
-            h3 Воспользуйтесь формой обратной связи
-            .modal__text В течении 48 часов я с вами свяжусь
+            h3 Оформить франшизу
             .modal__form
                 form(action="#")   
                     .form-line.phone
-                        input(type='text', name='name', placeholder='Имя', required)
+                        input(type='text', name='name', placeholder='Имя контактного лица', required)
                     .form-line.phone
-                        input(type='email', name='email', placeholder='E-mail', required)
+                        input#modal__phone.phone-mask(type='text', name='phone', placeholder='Телефон', required)
                     .form-line.phone
-                        input#modal__phone.phone-mask(type='text', name='phone', placeholder='+ 7 (___) ___ – __ – __ ', required)
+                        input(type='email', name='email', placeholder='Email', required)
+                    .form-line.phone
+                        input(type='text', name='city', placeholder='Город', required)
                     .form-line
-                        input.btn(type='submit', value='Отправить')
+                        input.kviz-btn(type='submit', value='Отправить заявку')
                     .agree-line
                         input#modal__agree(type='checkbox', checked='', disabled)
-                        label(for='#modal__agree') Отправляя заявку, я принимаю 
-                            a(href="#") Пользовательское соглашение
-#modalEvents-1.modal.disabled
+                        label(for='#modal__agree') Нажимая "Отправить", вы соглашаетесь на обработку ваших персональных данных
+#modalPartners.modal.disabled
     .modal__wrap.animated.fadeInDown
         .close#modal-close
             svg.t-popup__close-icon(width='23px', height='23px', viewBox='0 0 23 23', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
@@ -30,11 +30,43 @@
                     rect(transform='translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
                     rect(transform='translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
         .modal__body
-            .events__item
-                .events__name June 12
-                .events__position.events__position--top Section of psychology, studying mental phenomena in terms
-                .events__position Moscow Sevastopol Avenue 28/1
-                .events__position beginning 20:00
-                .events__text Section of psychology, studying mental phenomena in terms of their relationship with disease. The field of clinical psychology includes the diagnosis of mental health, the organization and conduct of research to understand psychophysiological problems and the development, implementation and evaluation of psychological correction. Section of psychology, studying mental phenomena in terms of their relationship with disease. The field of clinical psychology includes the diagnosis of mental health, the organization and conduct of research to understand psychophysiological problems and the development, implementation and evaluation of psychological correction. Section of psychology, studying mental phenomena in terms of their relationship with disease. The field of clinical psychology includes the diagnosis of mental health, the organization and conduct of research to understand psychophysiological problems and the development, implementation and evaluation of psychological correction.
-
- 
+            h3 Стать партнером
+            .modal__form
+                form(action="#")   
+                    .form-line.phone
+                        input(type='text', name='name', placeholder='Имя контактного лица', required)
+                    .form-line.phone
+                        input#modal__phone.phone-mask(type='text', name='phone', placeholder='Телефон', required)
+                    .form-line.phone
+                        input(type='email', name='email', placeholder='Email', required)
+                    .form-line.phone
+                        input(type='text', name='city', placeholder='Город', required)
+                    .form-line
+                        input.kviz-btn(type='submit', value='Отправить заявку')
+                    .agree-line
+                        input#modal__agree(type='checkbox', checked='', disabled)
+                        label(for='#modal__agree') Нажимая "Отправить", вы соглашаетесь на обработку ваших персональных данных
+#modalCorporate.modal.disabled
+    .modal__wrap.animated.fadeInDown
+        .close#modal-close
+            svg.t-popup__close-icon(width='23px', height='23px', viewBox='0 0 23 23', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                g(stroke='none', stroke-width='1', fill-rule='evenodd')
+                    rect(transform='translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
+                    rect(transform='translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
+        .modal__body
+            h3 Хочу корпоратив!
+            .modal__form
+                form(action="#")   
+                    .form-line.phone
+                        input(type='text', name='name', placeholder='Имя контактного лица', required)
+                    .form-line.phone
+                        input#modal__phone.phone-mask(type='text', name='phone', placeholder='Телефон', required)
+                    .form-line.phone
+                        input(type='email', name='email', placeholder='Email', required)
+                    .form-line.phone
+                        input(type='text', name='city', placeholder='Город', required)
+                    .form-line
+                        input.kviz-btn(type='submit', value='Отправить заявку')
+                    .agree-line
+                        input#modal__agree(type='checkbox', checked='', disabled)
+                        label(for='#modal__agree') Нажимая "Отправить", вы соглашаетесь на обработку ваших персональных данных
