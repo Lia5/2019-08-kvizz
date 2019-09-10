@@ -36,6 +36,32 @@ nav {
         padding: 5px;
         cursor: pointer;
     }
+    &-search {
+        background: #fff;
+        position: absolute;
+        top: -20px;
+        right: 5%;
+        padding: 2px;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 6px;
+            right: 4px;
+            width: 27px;
+            height: 21px;
+            background: url('../assets/img/icons/glass.png') no-repeat;
+            background-position: center right;
+            background-size: 87%;
+            z-index: 1;
+        }
+        
+        
+        input {
+            border: none;
+            padding: 5px;
+            background: transparent;
+        }
+    }
     &__item {
         color: #fff;
         cursor: pointer;
@@ -61,6 +87,7 @@ nav {
 
         &.active {
             display: flex;
+            overflow: auto;
         }
     }
 
