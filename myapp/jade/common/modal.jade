@@ -81,6 +81,14 @@
             h3 Записаться на игру
             .modal__form
                 form(action="#")
+                    .firm-line
+                        .schedule__item-top
+                            .schedule__name Киномания #6
+                            .schedule__price 500 р.
+                        .schedule__place Ресторан "Восход" 
+                        .schedule__date 28 июня в 20:00
+                        .schedule__descr Оплата 500 р. при входе наличными.
+                        .schedule__descr Детям до 12 лет вход бесплатно
                     .form-line
                         input(type='text', name='team', placeholder='Название команды', required)
                     .form-line
@@ -101,7 +109,19 @@
                             option 2
                             option 3
                     .form-line
-                        input.kviz-btn(type='submit', value='Отправить заявку')
+                        input(type="checkbox" name="first"  value="first" id="first")
+                        label(for="first") В первый раз
+                    .form-line
+                        input(type="checkbox" name="birthday"  value="birthday" id="birthday")
+                        label(for="birthday") В команде есть именинники
+                    .form-line
+                        input(type="checkbox" name="widthout_team"  value="widthout_team" id="widthout_team")
+                        label(for="widthout_team") Без команды
+                    .form-line
+                        input(type="checkbox" name="free_team"  value="free_team" id="free_team")
+                        label(for="free_team") Готовы принять игроков
+                    .form-line
+                        input.kviz-btn(type='submit', value='Записаться на игру')
                     .agree-line
                         input#modal__agree4(type='checkbox', checked='', disabled)
                         label(for='#modal__agree4') Нажимая "Отправить", вы соглашаетесь на обработку ваших персональных данных

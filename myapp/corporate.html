@@ -359,6 +359,16 @@
           <h3>Записаться на игру</h3>
           <div class="modal__form">
             <form action="#">
+              <div class="firm-line">
+                <div class="schedule__item-top">
+                  <div class="schedule__name">Киномания #6</div>
+                  <div class="schedule__price">500 р.</div>
+                </div>
+                <div class="schedule__place">Ресторан "Восход" </div>
+                <div class="schedule__date">28 июня в 20:00</div>
+                <div class="schedule__descr">Оплата 500 р. при входе наличными.</div>
+                <div class="schedule__descr">Детям до 12 лет вход бесплатно</div>
+              </div>
               <div class="form-line">
                 <input type="text" name="team" placeholder="Название команды" required>
               </div>
@@ -387,7 +397,23 @@
                 </select>
               </div>
               <div class="form-line">
-                <input type="submit" value="Отправить заявку" class="kviz-btn">
+                <input type="checkbox" name="first" value="first" id="first">
+                <label for="first">В первый раз</label>
+              </div>
+              <div class="form-line">
+                <input type="checkbox" name="birthday" value="birthday" id="birthday">
+                <label for="birthday">В команде есть именинники</label>
+              </div>
+              <div class="form-line">
+                <input type="checkbox" name="widthout_team" value="widthout_team" id="widthout_team">
+                <label for="widthout_team">Без команды</label>
+              </div>
+              <div class="form-line">
+                <input type="checkbox" name="free_team" value="free_team" id="free_team">
+                <label for="free_team">Готовы принять игроков</label>
+              </div>
+              <div class="form-line">
+                <input type="submit" value="Записаться на игру" class="kviz-btn">
               </div>
               <div class="agree-line">
                 <input id="modal__agree4" type="checkbox" checked="" disabled>
