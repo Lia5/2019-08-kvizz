@@ -9,13 +9,13 @@
             h3 Оформить франшизу
             .modal__form
                 form(action="#")   
-                    .form-line.phone
+                    .form-line
                         input(type='text', name='name', placeholder='Имя контактного лица', required)
-                    .form-line.phone
+                    .form-line
                         input.phone-mask(type='text', name='phone', placeholder='Телефон', required)
-                    .form-line.phone
+                    .form-line
                         input(type='email', name='email', placeholder='Email', required)
-                    .form-line.phone
+                    .form-line
                         input(type='text', name='city', placeholder='Город', required)
                     .form-line
                         input.kviz-btn(type='submit', value='Отправить заявку')
@@ -33,13 +33,13 @@
             h3 Стать партнером
             .modal__form
                 form(action="#")   
-                    .form-line.phone
+                    .form-line
                         input(type='text', name='name', placeholder='Имя контактного лица', required)
-                    .form-line.phone
+                    .form-line
                         input.phone-mask(type='text', name='phone', placeholder='Телефон', required)
-                    .form-line.phone
+                    .form-line
                         input(type='email', name='email', placeholder='Email', required)
-                    .form-line.phone
+                    .form-line
                         input(type='text', name='city', placeholder='Город', required)
                     .form-line
                         input.kviz-btn(type='submit', value='Отправить заявку')
@@ -57,20 +57,20 @@
             h3 Хочу корпоратив!
             .modal__form
                 form(action="#")   
-                    .form-line.phone
+                    .form-line
                         input(type='text', name='name', placeholder='Имя контактного лица', required)
-                    .form-line.phone
+                    .form-line
                         input.phone-mask(type='text', name='phone', placeholder='Телефон', required)
-                    .form-line.phone
+                    .form-line
                         input(type='email', name='email', placeholder='Email', required)
-                    .form-line.phone
+                    .form-line
                         input(type='text', name='city', placeholder='Город', required)
                     .form-line
                         input.kviz-btn(type='submit', value='Отправить заявку')
                     .agree-line
                         input#modal__agree3(type='checkbox', checked='', disabled)
                         label(for='#modal__agree3') Нажимая "Отправить", вы соглашаетесь на обработку ваших персональных данных
-#modalGame.modal.disabled
+#modalGame.modal.modal--game.disabled
     .modal__wrap.animated.fadeInDown
         .close.modal-close
             svg.t-popup__close-icon(width='23px', height='23px', viewBox='0 0 23 23', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
@@ -80,15 +80,26 @@
         .modal__body
             h3 Записаться на игру
             .modal__form
-                form(action="#")   
-                    .form-line.phone
+                form(action="#")
+                    .form-line
+                        input(type='text', name='team', placeholder='Название команды', required)
+                    .form-line
                         input(type='text', name='name', placeholder='Имя контактного лица', required)
-                    .form-line.phone
+                    .form-line
                         input.phone-mask(type='text', name='phone', placeholder='Телефон', required)
-                    .form-line.phone
+                    .form-line
                         input(type='email', name='email', placeholder='Email', required)
-                    .form-line.phone
-                        input(type='text', name='city', placeholder='Город', required)
+                    .form-line
+                        select.styled
+                            option Количество игроков
+                            option 1
+                            option 2
+                    .form-line
+                        select.styled
+                            option Откуда вы про нас узнали?
+                            option 1
+                            option 2
+                            option 3
                     .form-line
                         input.kviz-btn(type='submit', value='Отправить заявку')
                     .agree-line
@@ -106,13 +117,13 @@
             h3 Забрать подарок
             .modal__form
                 form(action="#")   
-                    .form-line.phone
+                    .form-line
                         input(type='text', name='name', placeholder='Имя контактного лица', required)
-                    .form-line.phone
+                    .form-line
                         input.phone-mask(type='text', name='phone', placeholder='Телефон', required)
-                    .form-line.phone
+                    .form-line
                         input(type='email', name='email', placeholder='Email', required)
-                    .form-line.phone
+                    .form-line
                         input(type='text', name='city', placeholder='Город', required)
                     .form-line
                         input.kviz-btn(type='submit', value='Отправить')

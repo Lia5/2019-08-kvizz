@@ -91,88 +91,92 @@
 
 
 }
-.jq-selectbox__select {
-    height: auto;
-    padding: 10px;
-    background-color: $yellow;
-    // background: blue;
-    border-top: 10px solid #000;
-    border-bottom: 10px solid #000;
-    // background-size: 100%
-    position: relative;
-    z-index: 1;
-    &:before, &:after {
-        content: "";
-        position: absolute;
-        top: -10px;
-        width: 28px;
-        height: 100%;
+.schedule__filters {
+        .jq-selectbox__select {
+        height: auto;
+        padding: 10px;
         background-color: $yellow;
+        // background: blue;
         border-top: 10px solid #000;
         border-bottom: 10px solid #000;
-        
-    }
-    &:before {
-        left: -25px;
-        transform: skew(-17deg, 0deg);
-        border-left: 10px solid #000;
-        z-index: -1;
-    }
-    &:after {
-        right: -25px;
-        transform: skew(14deg,0deg);
-        border-right: 10px solid #000;
-        z-index: -2;
-    }
-
-    &:hover {
-        background-color: $yellow;
+        // background-size: 100%
+        position: relative;
+        z-index: 1;
         &:before, &:after {
+            content: "";
+            position: absolute;
+            top: -10px;
+            width: 28px;
+            height: 100%;
             background-color: $yellow;
+            border-top: 10px solid #000;
+            border-bottom: 10px solid #000;
+            
         }
-    }
-    &:active {
-        background-color: $yellow;
-        &:before, &:after {
-            background-color: $yellow;
-        }
-    }
-}
-.filter--other {
-    .jq-selectbox__select {
         &:before {
-            transform: skew(12deg,0deg);
+            left: -25px;
+            transform: skew(-17deg, 0deg);
+            border-left: 10px solid #000;
+            z-index: -1;
         }
         &:after {
-            transform: skew(-16deg,0deg);
-        }            
-    }
-}
-.jq-selectbox__dropdown {
-    border: 10px solid #000;
-    background: $yellow;
-}
-.jq-selectbox {
-    max-width: 179px;
-    margin: 0 auto;
-    &.focused .jq-selectbox__select  {
-        background-color: $yellow;
-    }
-    li{
-        &.selected, &:hover {
-            background-color: #14a1cc;
+            right: -25px;
+            transform: skew(14deg,0deg);
+            border-right: 10px solid #000;
+            z-index: -2;
+        }
+
+        &:hover {
+            background-color: $yellow;
+            &:before, &:after {
+                background-color: $yellow;
+            }
+        }
+        &:active {
+            background-color: $yellow;
+            &:before, &:after {
+                background-color: $yellow;
+            }
         }
     }
+    .filter--other {
+        .jq-selectbox__select {
+            &:before {
+                transform: skew(12deg,0deg);
+            }
+            &:after {
+                transform: skew(-16deg,0deg);
+            }            
+        }
+    }
+    .jq-selectbox__dropdown {
+        border: 10px solid #000;
+        background: $yellow;
+    }
+    .jq-selectbox {
+        max-width: 179px;
+        margin: 0 auto;
+        &.focused .jq-selectbox__select  {
+            background-color: $yellow;
+        }
+        li{
+            &.selected, &:hover {
+                background-color: #14a1cc;
+            }
+        }
+    }
+    .jq-selectbox__trigger-arrow {
+        top: 15px;
+        border-top: 13px solid #000;
+        border-right: 13px solid transparent;
+        border-left: 13px solid transparent;
+    }
+    .opened .jq-selectbox__select {
+    border-color: #000;
+    }
 }
-.jq-selectbox__trigger-arrow {
-    top: 15px;
-    border-top: 13px solid #000;
-    border-right: 13px solid transparent;
-    border-left: 13px solid transparent;
-}
-.opened .jq-selectbox__select {
-border-color: #000;
-}
+
+
 .filter {
     .jq-selectbox__select {
         max-width: 179px;
