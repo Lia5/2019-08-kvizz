@@ -1238,6 +1238,11 @@
     .header .page__header-text {
         height: 390px;
     }
+    .sertificate {
+        .kviz-btn {
+            width: 100%;
+        }
+    }
     .index {
         .header .page__header-text {
             padding: 20vw 4vw 12vw 30vw;
@@ -1276,7 +1281,7 @@
                 align-items: flex-start;
             }
             &__top:nth-child(2) {
-                flex-direction: column;
+                display: block;
                 align-items: flex-start;
             }
             &__name {
