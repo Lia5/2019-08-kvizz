@@ -122,9 +122,35 @@
 
 
     }
+    .kviz-btn a {
+        font-size: 18px
+    } 
     &__soon {
-        max-width: 959px;
+        max-width: 1034px;
         margin: 0 auto;
+        .kviz-btn a {
+            font-size: 13px;
+        }
+        .schedule__item {
+            padding: 10px;
+        }
+        .schedule__part {
+            font-size: 13px;
+            width: 48%;
+        }
+        .schedule__descr {
+            font-size: 13px;
+        }
+        .schedule__item-top {
+            font-size: 19px;
+        }
+        .kviz-btn.kviz-btn--blue a {
+            font-size: 16px;
+
+        }
+        .kviz-btn.kviz-btn--red a {
+            font-size: 11px;
+        }
     }
     &-map {
       
@@ -247,9 +273,7 @@
         }
 
     }
-    .kviz-btn a {
-        font-size: 18px
-    }    
+       
     .arrow-prev {
         left: -32px;
     }
