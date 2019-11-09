@@ -643,6 +643,9 @@
         padding-top: 100px;
         padding-bottom: 0;
     }
+    .header .page__header-text:after {
+        background: none;
+    }
 }
 @media only screen and (max-width: 749px) {
     .index__example-slider {
