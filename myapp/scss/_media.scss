@@ -67,6 +67,12 @@
         }
     }
 }
+@media only screen and (max-width: 1283px) {
+    .schedule__item-wrap {
+        width: 50%;
+        width: calc(100% / 2);
+    }
+}
 @media only screen and (max-width: 1239px) {
     .partners {
         &__whom-item {
@@ -182,6 +188,11 @@
         &-wrap {
             width: 50%;
         }
+    }
+}
+@media only screen and (max-width: 1238px) {
+    .index__soon .schedule__item {
+        padding: 30px;
     }
 }
 @media only screen and (max-width: 1092px) {
@@ -595,6 +606,11 @@
             left: 30%;
         }
     }
+
+    .schedule__item-wrap {
+        width: 100%;
+    }
+
     .index {
         .header{
             .kviz-btn {
@@ -1429,6 +1445,18 @@
             width: 100%;
         }
     }
+    .schedule {
+        &__part {
+            font-size: 12px;
+        }
+        &__item {
+            padding: 14px;
+            .kviz-btn {
+                max-width: 230px;
+                width: auto;
+            }
+        }
+    }
     .index {
         .header .page__header-text {
             padding: 20vw 4vw 12vw 30vw;
@@ -1751,8 +1779,11 @@
             padding: 82px 0 160px;
         }
         .schedule__item {
-            padding: 30px;
+            padding: 15px;
             
+        }
+        .schedule__part {
+            width: 100%;
         }
     }
     .city__item { 
@@ -1919,6 +1950,18 @@
             &-items + .title {
                 text-transform: initial;
                 margin-bottom: 29px;
+            }
+        }
+    }
+    .schedule {
+        &__part {
+            width: 100%;
+        }
+    }
+    .index__soon {
+        .schedule {
+            &__part {
+                width: 100%;
             }
         }
     }
