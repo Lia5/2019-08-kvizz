@@ -59,6 +59,7 @@
         flex-basis: 0;
         flex-grow: 1;
         padding: 15px;
+        align-items: flex-end;
         &--center {
             text-align: center;
         }
@@ -72,12 +73,57 @@
         }
     }
     &__name {
+        font-size: 22px;
+        font-weight: 700;
         span {
             font-size: 24px;
+            font-weight: 800;
         }
     }
     &__count {
         padding: 0;
         font-size: 24px;
     }
+}
+.rat-sprite {
+    background-image: url('../assets/img/icons/rat-sprite.png');
+    background-repeat: no-repeat;
+    display: block;
+    margin-right: 20px;
+}
+
+.sprite-rat100 {
+    width: 29px;
+    height: 25px;
+    background-position: -5px -5px;
+}
+
+.sprite-rat1000 {
+    width: 29px;
+    height: 31px;
+    background-position: -38px -5px;
+}
+
+.sprite-rat250 {
+    width: 29px;
+    height: 31px;
+    background-position: -5px -46px;
+}
+
+.sprite-rat2500 {
+    width: 29px;
+    height: 29px;
+    background-position: -41px -46px;
+}
+
+.sprite-rat500 {
+    width: 29px;
+    height: 25px;
+    background-position: -73px -5px;
+}
+
+.sprite-rat5000 {
+    width: 29px;
+    height: 30px;
+    background-position: -80px -40px;
 }

@@ -1,34 +1,185 @@
 .corporate {
     overflow: hidden;
+    .wrap {
+        position: relative;
+
+    }
     .page__directions {
-        margin-bottom: 79px;
+        margin-bottom: 288px;
         .title {
             font-size: 30px;
             margin-bottom: 0;
         }
     }
     .page__header {
-        padding-bottom: 60px;
+        border-bottom: none;
+        padding-bottom: 138px;
     }
-
+    &__video {
+        padding: 100px 0;
+        background: #ff004c;
+        .title {
+            margin-bottom: 100px;
+        }
+        .wrap {
+            margin-top: -423px;
+            padding-bottom: 50px;
+            z-index: 1;
+        }
+    }
     &__body {
         background: #ff004c;
         padding-bottom: 100px;
         position: relative;
+        z-index: 1;
+        border-bottom: 10px solid #000;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../assets/img/dots-bg-linear.png) no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+        // &:after {
+        //     content: "";
+        //     position: absolute;
+        //     bottom: -149px;
+        //     left: 0;
+        //     width: 110%;
+        //     height: 222px;
+        //     transform: skew(-4deg,5deg);
+        //     background: #ff004c;
+        //     border-bottom: 10px solid #000;
+        // }
+        .title {
+            max-width: 1210px;
+        }
 
+    }
+    &__works {
+        padding: 50px 0 0;
+        position: relative;
+        background: #ff004c;
+        .title {
+            max-width: 650px;
+            margin-bottom: 40px;
+        }
+
+        &-body {
+            padding: 40px;
+            background: $yellow;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 725px;
+            margin: 0 auto;
+            border-top: 10px solid #000;
+            border-bottom: 10px solid #000;
+            position: relative;
+            z-index: 1;
+            &:before, &:after {
+                content: "";
+                position: absolute;
+                top: -10px;
+                width: 25%;
+                height: 100%;
+                background-color: $yellow;
+                border-top: 10px solid #000;
+                border-bottom: 10px solid #000;
+                
+            }
+            &:before {
+                left: -50px;
+                transform: skew(8deg, 0deg);
+                border-left: 10px solid #000;
+                z-index: -1;
+            }
+            &:after {
+                right: -80px;
+                transform: skew(-11deg,0deg);
+                border-right: 10px solid #000;
+                z-index: -2;
+            }
+            &-wrap {
+                padding-bottom: 30px;
+                position: relative;
+                z-index: 1;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 19px;
+                    right: 12%;
+                    width: 61%;
+                    height: 100%;
+                    transform: skew(-12deg,0deg);
+                    background: url(../assets/img/dots.jpg);
+                    z-index: -2;
+                }
+            }
+            
+        }
+        &-block {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 50px 60px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        &-text {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 22px;
+        }
+        &-date {
+            font-size: 16px;
+        }
+        &-item {
+            position: relative;
+            padding: 0 5px;
+            img {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+            &-wrap {
+                
+            }       
+        }
+        &-full {
+            width: 75%;
+        }
+        &-nav {
+            width: 24%;
+
+        }
+    }
+    &__format {
+        background: #ff004c;
+        position: relative;
+        padding: 200px 0 50px; 
         &:after {
             content: "";
             position: absolute;
-            bottom: -149px;
+            bottom: -259px;
             left: 0;
             width: 110%;
-            height: 222px;
-            transform: skew(-4deg,5deg);
+            height: 336px;
+            transform: skew(0deg,4deg);
             background: #ff004c;
             border-bottom: 10px solid #000;
-        }
-        .title {
-            max-width: 1210px;
+            @media only screen and (max-width: 1350px) {
+                bottom: -140px;
+            }
+            @media only screen and (max-width: 580px) {
+                height: 136px;
+                bottom: -59px;
+            }
         }
     }
     &__gallery {
@@ -140,6 +291,18 @@
             text-align: left;
             text-transform: uppercase;
         }
+        &--max {
+            p {
+                @media only screen and (min-width: 1465px) {
+                    font-size: 2vw;
+                    padding-right: 19vw;
+                }
+                @media only screen and (min-width: 1826px) {
+                    padding-right: 6vw;
+                }
+                
+            }
+        }
     }
     &__qa {
         position: relative;
@@ -226,6 +389,38 @@
             a {
                 font-size: 39px;
             }
+        }
+    }
+}
+.page__header {
+    .wrap {
+        position: relative;
+    }
+    .kviz-btn--corporate {
+        text-transform: inherit;
+        position: relative;
+        z-index: 1;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        max-width: 309px;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../assets/img/sky2.png);
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+        a {
+            color: #000;
+            border: none;
+            background: transparent;
+            font-size: 22px;
+            padding: 35px 81px 38px 40px;
         }
     }
 }

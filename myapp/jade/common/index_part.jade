@@ -209,6 +209,14 @@
                 li.index__what-item Ресторанное меню официанты работают в течении всей игры
                 li.index__what-item Битва из 7 раундов
                 li.index__what-item 50 вопросов
+            .kviz-btn
+                a(href="#") Узнать правила
+    .index__video
+        .wrap
+            .title Посмотри короткий видеоролик
+            .index__video-body
+                .video-container
+                    iframe(class="video" src="https://www.youtube.com/embed/l6pDOwNeTrg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
     .index__example
         .wrap
             .title Примеры вопросов
@@ -217,40 +225,40 @@
                     .index__example-item.index__example-item--first
                         .index__example-qa Вопрос 3: «Как называется простанство между  ноздрями?»
                         .kviz-btn
-                            a(href="#") Узнать ответ
+                            a(href="#modalAnswer").modal-open Узнать ответ
                 .index__example-wrap
                     .index__example-item.index__example-item--second
                         .index__example-qa Вопрос 1: «Угадайте город, который  называют «бетонным раем»
                         .index__example-pic
                             img(src="assets/img/example/examp-pic.jpg", alt="example")
                         .kviz-btn
-                            a(href="#") Узнать ответ
+                            a(href="#modalAnswer").modal-open Узнать ответ
                 .index__example-wrap
                     .index__example-item.index__example-item--third
                         .index__example-qa Вопрос 2: «Угадайте на  какую песню кавер»
                         .index__example-audio
                             a(href="#")
                         .kviz-btn
-                            a(href="#") Узнать ответ
+                            a(href="#modalAnswer").modal-open Узнать ответ
                 .index__example-wrap
                     .index__example-item.index__example-item--first
                         .index__example-qa Вопрос 3: «Как называется простанство между  ноздрями?»
                         .kviz-btn
-                            a(href="#") Узнать ответ
+                            a(href="#modalAnswer").modal-open Узнать ответ
                 .index__example-wrap
                     .index__example-item.index__example-item--second
                         .index__example-qa Вопрос 1: «Угадайте город, который  называют «бетонным раем»
                         .index__example-pic
                             img(src="assets/img/example/examp-pic.jpg", alt="example")
                         .kviz-btn
-                            a(href="#") Узнать ответ
+                            a(href="#modalAnswer").modal-open Узнать ответ
                 .index__example-wrap
                     .index__example-item.index__example-item--third
                         .index__example-qa Вопрос 2: «Угадайте на  какую песню кавер»
                         .index__example-audio
                             a(href="#")
                         .kviz-btn
-                            a(href="#") Узнать ответ
+                            a(href="#modalAnswer").modal-open Узнать ответ
     .index__qa
         .wrap
             .title Часто задаваемые вопросы
@@ -285,40 +293,58 @@
             .title Подпишитесь на нас Вконтакте и смотрите фотоотчеты
             .index__vk-body-wrap
                 .index__vk-body
-                    .index__vk-full
-                        .index__vk-item
-                            img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
-                        .index__vk-item
-                            img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
-                        .index__vk-item
-                            img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
-                        .index__vk-item
-                            img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
-                        .index__vk-item
-                            img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
-                        .index__vk-item
-                            img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
-                        .index__vk-item
-                            img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
-                        .index__vk-item
-                            img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
                     .index__vk-nav
                         .index__vk-item
-                            img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
+                            .index__vk-item-wrap
+                                .index__vk-text
+                                    .index__vk-name корпоратив:  «Америка  20-х годов»
+                                    .index__vk-date 20.02.2019
+                                img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
                         .index__vk-item
-                            img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
+                            .index__vk-item-wrap
+                                .index__vk-text
+                                    .index__vk-name корпоратив:  «Америка  20-х годов»
+                                    .index__vk-date 20.02.2019
+                                img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
                         .index__vk-item
-                            img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
+                            .index__vk-item-wrap
+                                .index__vk-text
+                                    .index__vk-name корпоратив:  «Америка  20-х годов»
+                                    .index__vk-date 20.02.2019
+                                img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
                         .index__vk-item
-                            img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
+                            .index__vk-item-wrap
+                                .index__vk-text
+                                    .index__vk-name корпоратив:  «Америка  20-х годов»
+                                    .index__vk-date 20.02.2019
+                                img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
                         .index__vk-item
-                            img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
+                            .index__vk-item-wrap
+                                .index__vk-text
+                                    .index__vk-name корпоратив:  «Америка  20-х годов»
+                                    .index__vk-date 20.02.2019
+                                img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
                         .index__vk-item
-                            img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
+                            .index__vk-item-wrap
+                                .index__vk-text
+                                    .index__vk-name корпоратив:  «Америка  20-х годов»
+                                    .index__vk-date 20.02.2019
+                                img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
                         .index__vk-item
-                            img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
+                            .index__vk-item-wrap
+                                .index__vk-text
+                                    .index__vk-name корпоратив:  «Америка  20-х годов»
+                                    .index__vk-date 20.02.2019
+                                img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
                         .index__vk-item
-                            img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
+                            .index__vk-item-wrap
+                                .index__vk-text
+                                    .index__vk-name корпоратив:  «Америка  20-х годов»
+                                    .index__vk-date 20.02.2019
+                                img(src="assets/img/vk-slider/vk1.jpg", alt="vk")
+                    .index__vk-calendar
+                        .datepicker
+
     .index__inst
         .wrap
             .title Подпишитесь на нас в инстаграмм и следите за новостями

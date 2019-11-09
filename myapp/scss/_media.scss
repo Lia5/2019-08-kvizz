@@ -55,6 +55,17 @@
             background: linear-gradient(53deg,rgba(255,255,255,0) 50%,#ffee1a 50%);
         }
     }
+    .schedule__anons {
+        &:after {
+            width: 36%;
+        }
+        &-text {
+            left: 15%;
+        }
+        &-img {
+            width: 40%;
+        }
+    }
 }
 @media only screen and (max-width: 1239px) {
     .partners {
@@ -160,6 +171,17 @@
     }
     .corporate__partners-slider {
         max-width: 500px;
+    }
+    .schedule__anons {
+        &:after {
+            content: none;
+        }
+        &-text {
+            display: none;
+        }
+        &-wrap {
+            width: 50%;
+        }
     }
 }
 @media only screen and (max-width: 1092px) {
@@ -368,6 +390,35 @@
             }
         }
     }
+    .modal-about .modal-close {
+        right: 17px;
+    }
+    .corporate__works {
+        &-body {
+            max-width: none;
+            border: 10px solid #000;
+            &:before, &:after {
+                content: none;
+            }
+            &-wrap {
+                &:before {
+                    width: 100%;
+                    right: -15px;
+                    top: 15px;
+                    transform: none;
+                }
+            }
+        }
+        &-full {
+            display: none;
+        }
+        &-nav {
+            width: 100%;
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
 }
 @media only screen and (max-width: 980px) {
     .title {
@@ -442,6 +493,9 @@
         }
     }  
     .rating {
+        .filter--btn {
+            margin-bottom: 10px;
+        }
         .jq-selectbox {
             &__select {
                 max-width: 90%;
@@ -489,6 +543,31 @@
             margin-bottom: 10px;
         }
     } 
+
+    .page__header {
+        .kviz-btn--corporate {
+            position: static;
+            max-width: 263px;
+            margin-top: 35px;
+            &:before {
+                content: none;
+            }
+            a {
+                background: #000;
+                border: 5px solid #000;
+                color: #fff;
+                font-size: 16px;
+                padding: 9px 23px;
+            }
+            &:hover {
+                a {
+                    color: #000;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+
     .filter-search-wrap {
         margin: 0 0 10px;
         max-width: 100%;
@@ -548,6 +627,21 @@
     }
     .subtitle {
         font-size: 22px;
+    }
+    .index__video-body:before {
+        top: -19%;
+        height: 125%;
+        transform: skew(0deg,0deg) perspective(0) rotatex(0);
+    }
+    .index__what {
+        padding-bottom: 110px;
+        &-items+.kviz-btn {
+            margin-top: -14px;
+        }
+    }
+    .corporate__format {
+        padding-top: 100px;
+        padding-bottom: 0;
     }
 }
 @media only screen and (max-width: 749px) {
@@ -703,6 +797,19 @@
             left: 17px;
         }
     }
+    .index__what .wrap:after {
+        transform: skew(0deg,0deg);
+    }
+    .index__video {
+        padding-top: 69px;
+        padding-bottom: 129px;
+        &-body:before {
+            height: 145%;
+        }
+        &:after {
+            height: 80px;
+        }
+    }
 }
 @media only screen and (max-width: 720px) {
     .partners {
@@ -850,6 +957,13 @@
             border-width: 5px;
         }
     }
+    .schedule__filters .jq-selectbox__select {
+        border-width: 5px;
+        &:before, &:after {
+            border-width: 5px;
+            top: -5px;
+        }
+    }
     .index {
             &__what-items {
             height: 241vw;
@@ -910,6 +1024,23 @@
             margin-bottom: 52px;
         }
     }
+    
+}
+@media only screen and (max-width: 670px) {
+    .modal-about{
+        .modal-close {
+            right: 5px;
+            top: 59px;
+            border-color: #ff004c;
+            background: #ff004c;
+            cursor: pointer;
+            &:hover {
+                background: #fff;
+                
+            }
+        }
+    }
+
     
 }
 @media only screen and (max-width: 580px) {
@@ -1017,7 +1148,7 @@
 
         &__whom {
             padding: 84px 0 64px;
-            margin-top: -251px;
+            margin-top: -174px;
         }
         &__body {
             margin-top: 0;
@@ -1056,29 +1187,15 @@
     }
     .franchise {
         .page__header-text {
-            height: 372px;
-        }
-        .page__header .kviz-btn {
-            top: -97px;
+            // height: 372px;
+            height: 463px;
         }
     }
     .corporate {
         &__header {
             padding-bottom: 0;
         }
-        .page__header {
-            padding-bottom: 0px;
-            &-text {
-                padding-top: 18vw;
-            }
-            .kviz-btn {
-                top: -133px;
-                text-transform: uppercase;
-                a {
-                    font-size: 18px;
-                }
-            }
-        }
+
         .page__directions {
             margin-bottom: 15px;
         }
@@ -1116,41 +1233,82 @@
         &__header {
             padding-top: 63px;
         }
+        &__video .wrap {
+            margin-top: 0;
+        }
         &__qa {
-            background: #18a1cd;
+            // background: #18a1cd;
             padding-bottom: 58px;
+            z-index: 1;
+            // &:after {
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     background: url(../assets/img/dots-bg-linear.png) no-repeat;
+            //     // background-size: 200%;
+            //     // transform: rotate(101deg);
+
+            //     border-top: none;
+            //     z-index: -1;
+            // }
+            .kviz-btn a {
+                font-size: 23px;
+            }
+        }
+        &__works {
+            .wrap {
+                z-index: 2;
+            }
+        }
+        &__format {
+            padding-top: 300px;
+            margin-top: -200px;
+            background: #18a1cd;
+            padding-bottom: 20px;
             z-index: 1;
             &:after {
                 top: 0;
                 left: 0;
                 width: 100%;
-                height: 100%;
+                height: 81%;
                 background: url(../assets/img/dots-bg-linear.png) no-repeat;
                 // background-size: 200%;
                 // transform: rotate(101deg);
-
-                border-top: none;
+                bottom: auto;
+                border-bottom: none;
                 z-index: -1;
             }
-            .kviz-btn a {
-                font-size: 23px;
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: -67px;
+                left: 0;
+                width: 100%;
+                height: 200px;
+                transform: skew(0deg,5deg);
+                background: #ff004c;
+                border-bottom: none;
+                z-index: -1;
             }
         }
         &__how {
+            background: #18a1cd;
             padding-top: 63px;
             &:before {
                 content: "";
                 position: absolute;
-                top: -24px;
+                top: -39px;
                 left: 0;
                 width: 110%;
                 height: 70px;
-                transform: skew(0deg,8deg);
-                background: #ff004c;
+                transform: skew(0deg,-8deg);
+                background: #18a1cd;
                 border-top: 5px solid #000;
                 z-index: 1;
             }
             &:after {
+                background: #18a1cd;
                 transform: skew(0deg,-11deg);
             }
             .title {
@@ -1167,6 +1325,7 @@
             }
         }
         &__partners {
+            background: #ff004c;
             padding-top: 95px;
             &-slider {
                 width: 95%;
@@ -1189,6 +1348,30 @@
             }
         }
 
+    }
+    .page__header {
+        padding-bottom: 0px;
+        &-text {
+            padding-top: 18vw;
+        }
+        .kviz-btn {
+            top: -133px;
+            text-transform: uppercase;
+            a {
+                font-size: 18px;
+            }
+            &--corporate {
+                text-transform: inherit;
+                margin-top: -120px;
+                margin-bottom: 89px;
+                &:before {
+                    content: none;
+                }
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
     }
     .rating {
         .wrap {
@@ -1458,6 +1641,42 @@
             padding: 10px 0;
         }
     }
+    .index__video {
+        padding-bottom: 79px;
+        &-body:before {
+            height: 140%;
+        }
+    }
+    .index__example:after {
+        transform: skew(0deg,-3deg);
+    }
+    .index__what-items+.kviz-btn {
+        margin-top: -97px;
+    }
+    .schedule__anons {
+        &-place {
+            display: none;
+        }
+        &-date {
+            display: none;
+        }
+        &-wrap {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 8px;
+        }
+        .kviz-btn {
+            margin: 92px auto 0;
+        }
+        &-img {
+            margin-left: 7%;
+            width: 92%;
+            position: absolute;
+            z-index: -1;
+        }
+    }
+
 }
 @media only screen and (max-width: 520px) {
     .page__directions .slick-slide:nth-child(1) .page__directions-item {
@@ -1536,13 +1755,35 @@
     .city__item { 
         width: 50%;
     }
+
+    .index__video {
+        background: #ff004c;
+        &:after {
+            background: #ff004c;
+            transform: skew(0deg,-8deg);
+        }
+        &-body {
+            max-width: 300px;
+            &:before {
+                border-width: 6px;
+                width: 111%;
+                left: -9%;
+            }
+        }
+        .wrap:after {
+            content: none;
+        }
+    }
+    .modal__body {
+        padding: 30px 20px;
+    }
 }
 @media only screen and (max-width: 474px) {
     .header .page__header-text {
         height: 359px;
     }
     .partners__whom {
-        margin-top: -313px;
+        margin-top: -181px;
     }
     .corporate__img-wrap {
         width: 236px;
@@ -1585,7 +1826,18 @@
     .arrow-next {
         right: 33px;
     }
-
+    .index__what-items+.kviz-btn {
+        margin-top: -31px;
+    }
+    .index__example:after {
+        content: none;
+    }
+    .index__video {
+        padding-bottom: 100px;
+    }
+    .index__example {
+        padding-top: 58px;
+    }
 }
 @media only screen and (max-width: 419px) {
     .header .page__header-text {
@@ -1615,10 +1867,10 @@
     .franchise {
         .page__header-text {
             padding: 14vw 10vw 2vw 29vw;
-            height: 310px;
+            height: 366px;
         }
         .page__header .kviz-btn {
-            top: -74px;
+            // top: -74px;
         }
         .page__header {
             padding-bottom: 27px;

@@ -78,17 +78,16 @@
                     rect(transform='translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
                     rect(transform='translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
         .modal__body
-            h3 Записаться на игру
+            .schedule__name Киномания #6
             .modal__form
                 form(action="#")
                     .firm-line
-                        .schedule__item-top
-                            .schedule__name Киномания #6
-                            .schedule__price 500 р.
-                        .schedule__place Ресторан "Восход" 
-                        .schedule__date 28 июня в 20:00
+                        .schedule__descr 
+                            | Ресторан "Восход" 
+                            br
+                            | 28 июня в 20:00
                         .schedule__descr Оплата 500 р. при входе наличными.
-                        .schedule__descr Детям до 12 лет вход бесплатно
+                        .schedule__descr Детям до 12 лет <br> вход бесплатно
                     .form-line
                         input(type='text', name='team', placeholder='Название команды', required)
                     .form-line
@@ -98,16 +97,33 @@
                     .form-line
                         input(type='email', name='email', placeholder='Email', required)
                     .form-line
-                        select.styled
-                            option Количество игроков
-                            option 1
-                            option 2
-                    .form-line
+                        p Количество игроков (до 9 чел.)
+                        .radiobox
+                            input(type="radio" name="players"  value="1" id="player1")
+                            label(for="player1") 1
+                            input(type="radio" name="players"  value="2" id="player2")
+                            label(for="player2") 2
+                            input(type="radio" name="players"  value="3" id="player3")
+                            label(for="player3") 3
+                            input(type="radio" name="players"  value="4" id="player4")
+                            label(for="player4") 4
+                            input(type="radio" name="players"  value="5" id="player5")
+                            label(for="player5") 5
+                            input(type="radio" name="players"  value="6" id="player6")
+                            label(for="player6") 6
+                            input(type="radio" name="players"  value="7" id="player7")
+                            label(for="player7") 7
+                            input(type="radio" name="players"  value="8" id="player8")
+                            label(for="player8") 8
+                            input(type="radio" name="players"  value="9" id="player9")
+                            label(for="player9") 9
+                 .form-line
                         select.styled
                             option Откуда вы про нас узнали?
-                            option 1
-                            option 2
-                            option 3
+                            option Рассказали друзьяе
+                            option Увидел рекламу
+                            option Нашёл в интернете
+                            option Свой ответ
                     .form-line
                         input(type="checkbox" name="first"  value="first" id="first")
                         label(for="first") В первый раз
@@ -150,3 +166,128 @@
                     .agree-line
                         input#modal__agree5(type='checkbox', checked='', disabled)
                         label(for='#modal__agree5') Нажимая "Отправить", вы соглашаетесь на обработку ваших персональных данных
+#modalSert.modal-sert.modal.disabled
+    .modal__wrap.animated.fadeInDown
+        .close.modal-close
+            svg.t-popup__close-icon(width='23px', height='23px', viewBox='0 0 23 23', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                g(stroke='none', stroke-width='1', fill-rule='evenodd')
+                    rect(transform='translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
+                    rect(transform='translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
+        .modal__body
+            h3 Заказать сертификат
+            .modal__form
+                form(action="#")   
+                    .form-line
+                        input(type='text', name='name', placeholder='Имя контактного лица', required)
+                    .form-line
+                        input.phone-mask(type='text', name='phone', placeholder='Телефон', required)
+                    .form-line
+                        input(type='email', name='email', placeholder='Email', required)
+                    .form-line
+                        input(type='text', name='city', placeholder='Город', required)
+                    .form-line Способ доставки
+                        .modal-sert__delivery
+                            input(type="radio" name="delivery"  value="game" id="delivery1")
+                            label(for="delivery1") На игру
+                            input(type="radio" name="delivery"  value="courier" id="delivery2")
+                            label(for="delivery2") Курьером
+                    .form-line Тип сертификата
+                        .modal-sert__delivery
+                            input(type="radio" name="type-sert"  value="2" id="type-sert1")
+                            label(for="type-sert1") 2 чел
+                            input(type="radio" name="type-sert"  value="4" id="type-sert2")
+                            label(for="type-sert2") 4 чел
+                            input(type="radio" name="type-sert"  value="6" id="type-sert3")
+                            label(for="type-sert3") 6 чел
+                            input(type="radio" name="type-sert"  value="8" id="type-sert4")
+                            label(for="type-sert4") 7 чел
+                    .form-line.center
+                        input.kviz-btn(type='submit', value='Отправить заявку')
+                    .agree-line
+                        input#modal__agree5(type='checkbox', checked='', disabled)
+                        label(for='#modal__agree5') Нажимая "Отправить", вы соглашаетесь на обработку ваших персональных данных
+#modalTshirt.modal-tshirt.modal.disabled
+    .modal__wrap.animated.fadeInDown
+        .close.modal-close
+            svg.t-popup__close-icon(width='23px', height='23px', viewBox='0 0 23 23', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                g(stroke='none', stroke-width='1', fill-rule='evenodd')
+                    rect(transform='translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
+                    rect(transform='translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
+        .modal__body
+            h3 Заказать футболку
+            .modal__form
+                form(action="#")   
+                    .form-line
+                        input(type='text', name='name', placeholder='Имя контактного лица', required)
+                    .form-line
+                        input.phone-mask(type='text', name='phone', placeholder='Телефон', required)
+                    .form-line
+                        input(type='email', name='email', placeholder='Email', required)
+                    .form-line
+                        input(type='text', name='count', placeholder='Количество', required)
+                    .form-line
+                        input(type='text', name='size', placeholder='Размер', required)
+                        .form-line
+                        input(type='text', name='material', placeholder='Материал', required)
+                    .form-line Выберите цвет
+                        .modal-tshirt__colors
+                            input(type="radio" name="color"  value="blue" id="color1")
+                            label(for="color1")
+                            input(type="radio" name="color"  value="yellow" id="color2")
+                            label(for="color2")
+                            input(type="radio" name="color"  value="red" id="color3")
+                            label(for="color3")
+                    .form-line.center
+                        input.kviz-btn(type='submit', value='Отправить заявку')
+                    .agree-line
+                        input#modal__agree5(type='checkbox', checked='', disabled)
+                        label(for='#modal__agree5') Нажимая "Отправить", вы соглашаетесь на обработку ваших персональных данных
+#modalAnswer.modal-answer.modal.disabled
+    .modal__wrap.animated.fadeInDown
+        .close.modal-close
+            svg.t-popup__close-icon(width='23px', height='23px', viewBox='0 0 23 23', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                g(stroke='none', stroke-width='1', fill-rule='evenodd')
+                    rect(transform='translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
+                    rect(transform='translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
+        .modal__body
+            .index__example-pic
+                img(src="assets/img/example/examp-pic.jpg", alt="example")
+            .modal__text Бетонным раем называют Сингапур
+#modalAbout.modal-about.modal.disabled
+    .modal__wrap.animated.fadeInDown
+        .close.modal-close
+            svg.t-popup__close-icon(width='23px', height='23px', viewBox='0 0 23 23', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                g(stroke='none', stroke-width='1', fill-rule='evenodd')
+                    rect(transform='translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
+                    rect(transform='translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) ', x='10.3137085', y='-3.6862915', width='2', height='30')
+        .modal__body
+            .modal__text С рейтингом всё предельно просто!  
+            .modal__text Баллы заработанные вашей командой за всю игру суммируются и по достижению определенного количества баллов команды получают титулы:
+            .modal-about__rats
+                .modal-about__rat
+                    .modal-about__count 100 баллов
+                    i.rat-sprite.sprite-rat100
+                    .modal-about__name Дикий кот
+                .modal-about__rat
+                    .modal-about__count 250 баллов
+                    i.rat-sprite.sprite-rat250
+                    .modal-about__name Боевой Котэ
+                .modal-about__rat
+                    .modal-about__count 500 баллов
+                    i.rat-sprite.sprite-rat500
+                    .modal-about__name Жан Кот Вам Дам
+                .modal-about__rat
+                    .modal-about__count 1000 баллов
+                    i.rat-sprite.sprite-rat1000
+                    .modal-about__name Джек Котофей
+                .modal-about__rat
+                    .modal-about__count 2500 баллов
+                    i.rat-sprite.sprite-rat2500
+                    .modal-about__name Шерлок Котс
+                .modal-about__rat
+                    .modal-about__count 5000 баллов
+                    i.rat-sprite.sprite-rat5000
+                    .modal-about__name Кот Карлеоне
+            .modal__text При получении командой очередного титула ей достаются разные «плюшки» от организаторов игры и большой респект!
+            .modal__text Рейтинг «За всё время» - это рейтинг команд по суммарному количеству баллов за всё время существования Квиzzов!
+            .modal__text Рейтинг «За сезон» - это рейтинг команд по количеству баллов, набранных за текущий сезон ( сезон это 3 месяца (весна, лето, осень, зима)).

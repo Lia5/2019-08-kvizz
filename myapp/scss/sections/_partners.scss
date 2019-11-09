@@ -1,4 +1,9 @@
 .partners {
+    .page__header {
+        .wrap {
+            position: relative;
+        }
+    }
     &__whom {
         position: relative;
         padding: 120px 0;

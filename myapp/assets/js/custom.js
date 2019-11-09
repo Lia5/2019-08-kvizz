@@ -237,6 +237,37 @@ if(jQuery('.index__example-slider').length) {
       ]
     });
 }   
+//corporate__works
+if(jQuery('.corporate__works-full').length) {
+  $('.corporate__works-full').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.corporate__works-nav'
+  });
+  $('.corporate__works-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.corporate__works-full',
+    dots: false,
+    // centerMode: true,
+    focusOnSelect: true,
+    prevArrow: '<div class="arrow-prev arrow-prev--desctop"></div>',
+    nextArrow: '<div class="arrow-next arrow-next--desctop"></div>',
+    vertical: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          vertical: false,
+        }
+      }
+    ]
+  });
+}
 
 if(jQuery('.modal__wrap').length) {
   let modalWrap = $('.modal__wrap');
@@ -250,6 +281,7 @@ if(jQuery('.modal__wrap').length) {
     modalWrap.addClass('fadeInDown');
     modal.removeClass('disabled');
     modal.addClass('flex');
+    $('body').addClass('body-modal-open');
     // body.addClass('body-modal');
   });
 
@@ -274,6 +306,7 @@ if(jQuery('.modal__wrap').length) {
       }, 700);
     setTimeout(function() {
         $('.modal').removeClass('flex');
+        $('body').removeClass('body-modal-open');
       }, 800);  
 
   });
@@ -293,6 +326,7 @@ if(jQuery('.modal__wrap').length) {
         }, 700);
         setTimeout(function() {
             $('.modal').removeClass('flex');
+            $('body').removeClass('body-modal-open');
         }, 800); 
       
     }
@@ -313,24 +347,15 @@ if(jQuery('.accordeon').length) {
   });
 }
 //vk
-if(jQuery('.index__vk-full').length) {
-  $('.index__vk-full').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: '.index__vk-nav'
-  });
+if(jQuery('.index__vk-nav').length) {
   $('.index__vk-nav').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: '.index__vk-full',
-    dots: false,
-    // centerMode: true,
-    focusOnSelect: true,
-    prevArrow: '<div class="arrow-prev arrow-prev--desctop"></div>',
-    nextArrow: '<div class="arrow-next arrow-next--desctop"></div>',
-    vertical: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    dots: true,
+    prevArrow: '<div class="arrow-prev"></div>',
+    nextArrow: '<div class="arrow-next"></div>',
+    rows: 2,
+    slidesPerRow: 1,
     responsive: [
       {
         breakpoint: 1024,
@@ -373,6 +398,9 @@ if(jQuery('.index__inst-slider').length) {
     ]
   });
 }
+
+$( ".datepicker" ).datepicker();
+
 
 
 // MAP
@@ -473,8 +501,6 @@ document.addEventListener('DOMContentLoaded', function(){
     for (i = 0; i < myTabs.length; i++) {
 		myTabs[i].addEventListener("click", myTabClicks)
 	}
-
-
 
 
 
