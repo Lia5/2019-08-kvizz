@@ -14,6 +14,9 @@
     .page__header {
         border-bottom: none;
         padding-bottom: 138px;
+        &.corporate__header--max {
+            padding-bottom: 0;
+        }
     }
     &__video {
         padding: 100px 0;
